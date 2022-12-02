@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { IconStar } from "~/components/icons/IconStar";
 
 export default component$(() => {
   const items = [
@@ -63,9 +64,8 @@ export default component$(() => {
               {subitems.map(({ title, description }) => (
                 <div class="flex flex-row max-w-md">
                   <div class="mb-4 mr-4">
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary-500 dark:bg-secondary-700">
-                      {/* <img src="@tabler/icons" alt="icon title" /> */}
-                      i
+                    <div class="text-white flex items-center justify-center w-12 h-12 rounded-full bg-secondary-500 dark:bg-secondary-700">
+                      <IconStar />
                     </div>
                   </div>
                   <div>

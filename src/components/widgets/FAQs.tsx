@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { IconArrowDownRight } from "../icons/IconArrowDownRight";
 
 export default component$(() => {
   const items = [
@@ -54,7 +55,7 @@ export default component$(() => {
               {subitems.map(({ question, answer }) => (
                 <div>
                   <p class="mb-4 text-xl font-bold">
-                    <i data-name="tabler:arrow-down-right" class="w-7 h-7 text-primary-500 inline-block" />
+                    <IconArrowDownRight />
                     {question}
                   </p>
                   {answer.split("\n\n").map((paragraph) => (

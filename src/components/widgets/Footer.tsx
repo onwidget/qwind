@@ -1,7 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 
-
+import { IconTwitter } from "~/components/icons/IconTwitter";
+import { IconInstagram } from "~/components/icons/IconInstagram";
+import { IconFacebook } from "~/components/icons/IconFacebook";
+import { IconGithub } from "~/components/icons/IconGithub";
 
 export default component$(() => {
   
@@ -53,16 +56,15 @@ export default component$(() => {
   ];
   
   const social = [
-    { label: "Twitter", icon: "tabler:brand-twitter", href: "#" },
-    { label: "Instagram", icon: "tabler:brand-instagram", href: "#" },
-    { label: "Facebook", icon: "tabler:brand-facebook", href: "#" },
-    { label: "RSS", icon: "tabler:rss", href: "/rss.xml" },
-    { label: "Github", icon: "tabler:brand-github", href: "https://github.com/onwidget/qwind" },
+    { label: "Twitter", icon: IconTwitter, href: "#" },
+    { label: "Instagram", icon: IconInstagram, href: "#" },
+    { label: "Facebook", icon: IconFacebook, href: "#" },
+    { label: "Github", icon: IconGithub, href: "https://github.com/onwidget/qwind" },
   ];
 
   return (
   <footer class="border-t border-gray-200 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
         <div class="col-span-12 lg:col-span-4">
           <div class="mb-2">
@@ -108,15 +110,15 @@ export default component$(() => {
       </div>
       <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
         <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
-          {social.map(({ label, href }) => (
+          {social.map(({ label, href, icon : Icon }) => (
             <li>
               <Link
                 class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                 aria-label={label}
+                title={label}
                 href={href}
               >
-                i
-                {/* <Icon name={icon} class="w-5 h-5" /> */}
+                {Icon && <Icon />}
               </Link>
             </li>
           ))}
@@ -125,7 +127,7 @@ export default component$(() => {
         <div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
           <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
           Made by{" "}
-          <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/">
+          <a class="text-secondary-700 hover:underline dark:text-gray-200" href="https://onwidget.com/">
             {" "}
             onWidget
           </a>
