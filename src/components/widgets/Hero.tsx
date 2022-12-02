@@ -13,7 +13,7 @@ export default component$(() => {
             <div>
               <h1 class="lg:mt-10 text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
                 Free template for <br class="hidden lg:block" />{" "}
-                <span class="hidden lg:inline">starts a website using </span>{" "}
+                <span class="hidden lg:inline">create a website using </span>{" "}
                 <span class="text-[#039de1]">Qwik</span> +{" "}
                 <span class="sm:whitespace-nowrap text-[#039de1]">
                   Tailwind CSS
