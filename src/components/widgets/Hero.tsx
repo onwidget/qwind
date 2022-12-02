@@ -3,7 +3,7 @@ import { component$ } from "@builder.io/qwik";
 
 import srcsetAvif from "~/assets/images/hero.jpg?w=300;500;900&avif&srcset";
 import srcsetWebp from "~/assets/images/hero.jpg?w=300;500;900&webp&srcset";
-import { src as placeholder, width, height } from "~/assets/images/hero.jpg?width=300&metadata";
+import { src as placeholder } from "~/assets/images/hero.jpg?width=300&metadata";
 
 export default component$(() => {
   return (
@@ -56,8 +56,8 @@ export default component$(() => {
                 <source srcset={srcsetWebp} type="image/webp" />
                 <img
                   src={placeholder}
-                  width={width}
-                  height={height}
+                  width={1000}
+                  height={1250}
                   class="mx-auto w-full"
                   alt="Hero Image"
                   loading="eager"
