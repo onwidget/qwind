@@ -9,12 +9,12 @@ interface ItemProps {
 
 export default component$((props: ItemProps) => {
   const { iconClass } = props;
-  const store = useStore({ theme: "light" });
+  const store = useStore({ theme: typeof window !== "undefined" && window?.localStorage?.theme || undefined });
 
   useClientEffect$(() => {
     store.theme =
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      window.localStorage.theme === "dark" ||
+      (!("theme" in window.localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
         ? "dark"
         : "light";
   });
@@ -28,11 +28,11 @@ export default component$((props: ItemProps) => {
         switch (store.theme) {
           case "dark":
             document.documentElement.classList.remove("dark");
-            store.theme = localStorage.theme = "light";
+            store.theme = window.localStorage.theme = "light";
             break;
           default:
             document.documentElement.classList.add("dark");
-            store.theme = localStorage.theme = "dark";
+            store.theme = window.localStorage.theme = "dark";
             break;
         }
       }}
