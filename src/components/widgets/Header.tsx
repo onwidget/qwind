@@ -1,5 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
 import Logo from "~/components/atoms/Logo";
 import { IconGithub } from "~/components/icons/IconGithub";
 import ToggleTheme from "~/components/core/ToggleTheme";
@@ -13,9 +12,9 @@ export default component$(() => {
     >
       <div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
         <div class="flex justify-between">
-          <Link class="flex items-center" href={"/"}>
+          <a class="flex items-center" href={"/"}>
             <Logo />
-          </Link>
+          </a>
           <div class="flex items-center md:hidden">
             <ToggleTheme iconClass="w-6 h-6" />
             <ToggleMenu iconClass="w-6 h-6" />
@@ -32,54 +31,54 @@ export default component$(() => {
               </button>
               <ul class="dropdown-menu rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white md:min-w-[200px] dark:md:bg-slate-800 drop-shadow-xl">
                 <li>
-                  <Link
+                  <a
                     class="rounded-t md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
                     href="#"
                   >
                     Features
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
+                  <a
                     class="md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
                     href="#"
                   >
                     Profile
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
+                  <a
                     class="rounded-b md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
                     href="#"
                   >
                     Pricing
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </li>
             <li>
-              <Link
+              <a
                 class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 href={"#"}
               >
                 Resources
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
+              <a
                 class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 href={"/blog"}
               >
                 Blog
-              </Link>
+              </a>
             </li>
             <li class="md:hidden">
-              <Link
+              <a
                 class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 href="https://github.com/onwidget/qwind"
               >
                 Github
-              </Link>
+              </a>
             </li>
           </ul>
           <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">

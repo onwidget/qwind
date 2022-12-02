@@ -7,19 +7,22 @@ export const IconMenu = (props: ItemProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
       class={`icon icon-tabler icon-tabler-menu ${className || "w-5 h-5"}`}
-      width="24"
-      height="24"
+      preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke="currentColor"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
     >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <line x1="4" y1="8" x2="20" y2="8"></line>
-      <line x1="4" y1="16" x2="20" y2="16"></line>
+      <g
+        class="icon-tabler"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4 8h16"></path>
+        <path d="M4 16h16"></path>
+      </g>
     </svg>
   );
 };

@@ -22,6 +22,17 @@
   .btn-primary {
     @apply font-semibold bg-primary-600 text-white border-primary-600 hover:bg-primary-800 hover:border-primary-800 hover:text-white dark:text-white dark:bg-primary-700 dark:border-primary-700 dark:hover:border-primary-900 dark:hover:bg-primary-900;
   }
+
+  [data-aw-toggle-menu] path {
+    @apply transition;
+  }
+  [data-aw-toggle-menu].expanded g > path:first-child {
+    @apply -rotate-45 translate-y-[15px] translate-x-[-3px];
+  }
+  
+  [data-aw-toggle-menu].expanded g > path:last-child {
+    @apply rotate-45 translate-y-[-8px] translate-x-[14px];
+  }
 }
 
 .dropdown:hover .dropdown-menu {
