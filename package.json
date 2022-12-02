@@ -1,9 +1,7 @@
 {
-  "name": "my-qwik-basic-starter",
-  "description": "App with Routing built-in (recommended)",
-  "engines": {
-    "node": ">=15.0.0"
-  },
+  "name": "qwind",
+  "description": "A template to make your website using Qwik + Tailwind CSS.",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "qwik build",
@@ -41,5 +39,7 @@
     "vite-imagetools": "^4.0.11",
     "vite-tsconfig-paths": "3.5.0"
   },
-  "dependencies": {}
+  "engines": {
+    "node": ">=15.0.0"
+  }
 }

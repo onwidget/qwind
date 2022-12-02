@@ -1,7 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 
+// @ts-ignore
 import srcsetAvif from "~/assets/images/hero.jpg?w=300;500;900&avif&srcset";
+// @ts-ignore
 import srcsetWebp from "~/assets/images/hero.jpg?w=300;500;900&webp&srcset";
+// @ts-ignore
 import { src as placeholder } from "~/assets/images/hero.jpg?width=300&metadata";
 
 export default component$(() => {
@@ -56,8 +59,8 @@ export default component$(() => {
           <div class="flex items-center flex-1">
             <div class="relative m-auto max-w-4xl">
               <picture>
-                <source scrset={srcsetAvif} type="image/avif" />
-                <source srcset={srcsetWebp} type="image/webp" />
+                <source srcSet={srcsetAvif} type="image/avif" />
+                <source srcSet={srcsetWebp} type="image/webp" />
                 <img
                   src={placeholder}
                   width={1000}
