@@ -6,7 +6,7 @@ import {
 } from "@builder.io/qwik-city";
 import { RouterHead } from "~/components/core/RouterHead";
 
-import '@fontsource/inter/variable.css';
+import interFontStyles from '@fontsource/inter/variable.css?inline';
 import globalStyles from "~/assets/styles/global.css?inline";
 
 export default component$(() => {
@@ -17,6 +17,7 @@ export default component$(() => {
    * Dont remove the `<head>` and `<body>` elements.
    */
   useStyles$(globalStyles);
+  useStyles$(interFontStyles);
 
   return (
     <QwikCityProvider>
