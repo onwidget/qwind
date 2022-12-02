@@ -40,7 +40,10 @@ export default component$(() => {
                   </Link>
                 </li>
                 <li>
-                  <Link class="md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap" href="#">
+                  <Link
+                    class="md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
+                    href="#"
+                  >
                     Profile
                   </Link>
                 </li>

@@ -2,7 +2,7 @@ import { staticAdaptor } from "@builder.io/qwik-city/adaptors/static/vite";
 import { extendConfig } from "@builder.io/qwik-city/vite";
 import baseConfig from "../../vite.config";
 
-import { SITE } from "../../src/config.mjs"
+import { SITE } from "../../src/config.mjs";
 
 export default extendConfig(baseConfig, () => {
   return {

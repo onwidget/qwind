@@ -9,12 +9,17 @@ interface ItemProps {
 
 export default component$((props: ItemProps) => {
   const { iconClass } = props;
-  const store = useStore({ theme: typeof window !== "undefined" && window?.localStorage?.theme || undefined });
+  const store = useStore({
+    theme:
+      (typeof window !== "undefined" && window?.localStorage?.theme) ||
+      undefined,
+  });
 
   useClientEffect$(() => {
     store.theme =
       window.localStorage.theme === "dark" ||
-      (!("theme" in window.localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      (!("theme" in window.localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
         ? "dark"
         : "light";
   });
@@ -37,7 +42,11 @@ export default component$((props: ItemProps) => {
         }
       }}
     >
-      {store.theme == "dark" ? <IconSun class={iconClass} /> : <IconMoon class={iconClass} />}
+      {store.theme == "dark" ? (
+        <IconSun class={iconClass} />
+      ) : (
+        <IconMoon class={iconClass} />
+      )}
     </button>
   );
 });
