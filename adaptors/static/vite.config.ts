@@ -2,6 +2,8 @@ import { staticAdaptor } from "@builder.io/qwik-city/adaptors/static/vite";
 import { extendConfig } from "@builder.io/qwik-city/vite";
 import baseConfig from "../../vite.config";
 
+import { SITE } from "../../src/config.mjs"
+
 export default extendConfig(baseConfig, () => {
   return {
     build: {
@@ -12,7 +14,7 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       staticAdaptor({
-        origin: "https://yoursite.qwik.dev",
+        origin: SITE.origin,
       }),
     ],
   };
