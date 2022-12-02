@@ -23,7 +23,8 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Qwind site description",
+      content:
+        "Qwind is a free and ready to start template to make your website using Qwik and Tailwind CSS.",
     },
   ],
 };

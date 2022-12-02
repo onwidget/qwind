@@ -33,7 +33,8 @@ export default component$(() => {
       It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.`,
       },
       {
-        question: "If you could only ask one question to each person you meet, what would that question be?",
+        question:
+          "If you could only ask one question to each person you meet, what would that question be?",
         answer: `This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.`,
       },
     ],
@@ -59,7 +60,9 @@ export default component$(() => {
                     {question}
                   </p>
                   {answer.split("\n\n").map((paragraph) => (
-                    <p class="text-gray-700 dark:text-gray-400 mb-2">{paragraph}</p>
+                    <p class="text-gray-700 dark:text-gray-400 mb-2">
+                      {paragraph}
+                    </p>
                   ))}
                 </div>
               ))}

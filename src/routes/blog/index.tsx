@@ -5,7 +5,12 @@ export default component$(() => {
   return (
     <>
       <section>
-        <div>Coming soon</div>
+        <div class="max-w-6xl mx-auto py-16 px-4 sm:px-6 h-[80vh]">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+            Blog
+          </h1>
+          <p class="text-xl">Coming soon ...</p>
+        </div>
       </section>
     </>
   );
@@ -16,7 +21,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Qwind site description",
+      content: "Lorem ipsum lorem ...",
     },
   ],
 };

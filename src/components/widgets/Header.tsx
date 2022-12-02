@@ -5,7 +5,6 @@ import { IconGithub } from "~/components/icons/IconGithub";
 import { IconSun } from "~/components/icons/IconSun";
 
 export default component$(() => {
-
   return (
     <header
       class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm"
@@ -40,7 +39,10 @@ export default component$(() => {
                   </Link>
                 </li>
                 <li class="">
-                  <Link class="md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap" href="#">
+                  <Link
+                    class="md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
+                    href="#"
+                  >
                     Profile
                   </Link>
                 </li>
@@ -85,7 +87,7 @@ export default component$(() => {
               <Link
                 class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                 aria-label="RSS Feed"
-                href={'/rss.xml'}
+                href={"/rss.xml"}
               >
                 {/* <Icon name="tabler:rss" class="w-5 h-5" /> */}
                 <IconSun />

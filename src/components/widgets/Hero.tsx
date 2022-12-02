@@ -1,5 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-// import { Link } from "@builder.io/qwik-city";
 
 import srcsetAvif from "~/assets/images/hero.jpg?w=300;500;900&avif&srcset";
 import srcsetWebp from "~/assets/images/hero.jpg?w=300;500;900&webp&srcset";
@@ -14,19 +13,24 @@ export default component$(() => {
             <div>
               <h1 class="lg:mt-10 text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
                 Free template for <br class="hidden lg:block" />{" "}
-                <span class="hidden lg:inline">create a website using </span> <span class="text-[#039de1]">Qwik</span> +{" "}
-                <span class="sm:whitespace-nowrap text-[#039de1]">Tailwind CSS</span>
+                <span class="hidden lg:inline">create a website using </span>{" "}
+                <span class="text-[#039de1]">Qwik</span> +{" "}
+                <span class="sm:whitespace-nowrap text-[#039de1]">
+                  Tailwind CSS
+                </span>
               </h1>
               <div class="max-w-3xl mx-auto">
                 <p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
                   <span class="font-semibold underline decoration-wavy decoration-1 decoration-secondary-600 underline-offset-2">
                     Qwind
                   </span>{" "}
-                  is a production ready template to start your new website using <em>Qwik</em> + <em>Tailwind CSS</em>.
-                  It has been designed following Best Practices, SEO, Accessibility,{" "}
+                  is a production ready template to start your new website using{" "}
+                  <em>Qwik</em> + <em>Tailwind CSS</em>. It has been designed
+                  following Best Practices, SEO, Accessibility,{" "}
                   <span class="inline sm:hidden">...</span>
                   <span class="hidden sm:inline">
-                    Dark Mode, Great Page Speed, image optimization, sitemap generation and more.
+                    Dark Mode, Great Page Speed, image optimization, sitemap
+                    generation and more.
                   </span>
                 </p>
                 <div class="max-w-xs sm:max-w-md flex flex-nowrap flex-col sm:flex-row gap-4 m-auto md:m-0 justify-center md:justify-start">
@@ -58,9 +62,10 @@ export default component$(() => {
                   src={placeholder}
                   width={1000}
                   height={1250}
-                  class="mx-auto w-full"
+                  class="mx-auto w-full rounded-md md:h-full bg-gray-400 dark:bg-slate-700"
                   alt="Hero Image"
                   loading="eager"
+                  decoding="async"
                 />
               </picture>
             </div>

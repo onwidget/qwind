@@ -49,13 +49,15 @@ export default component$(() => {
     <section class="scroll-mt-16" id="features">
       <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
         <div class="mb-10 md:mx-auto sm:text-center md:mb-12 max-w-3xl">
-          <p class="text-base text-primary-600 dark:text-purple-200 font-semibold tracking-wide uppercase">Features</p>
+          <p class="text-base text-primary-600 dark:text-purple-200 font-semibold tracking-wide uppercase">
+            Features
+          </p>
           <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
             What you get with <span class="whitespace-nowrap">Qwind</span>
           </h2>
           <p class="max-w-3xl mx-auto sm:text-center text-xl text-gray-600 dark:text-slate-400">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque
-            ipsa quae.
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque rem aperiam, eaque ipsa quae.
           </p>
         </div>
         <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
@@ -70,7 +72,9 @@ export default component$(() => {
                   </div>
                   <div>
                     <h3 class="mb-3 text-xl font-bold">{title}</h3>
-                    <p class="text-gray-600 dark:text-slate-400">{description}</p>
+                    <p class="text-gray-600 dark:text-slate-400">
+                      {description}
+                    </p>
                   </div>
                 </div>
               ))}
