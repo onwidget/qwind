@@ -1,27 +1,94 @@
-# Qwik City App ⚡️
+# ⚡️ Qwind
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+<img src="lighthouse-score.png" align="right"
+     alt="Qwind Lighthouse Score" width="100" height="358">
 
----
+**Qwind** is a free and open-source template to make your website using **Qwik + Tailwind CSS**. Ready to start a new project and designed taking into account best practices.
 
-## Project Structure
+## Features
+
+- ✅ Integration with **Tailwind CSS** supporting **Dark mode**.
+- ✅ **Production-ready** scores in [Lighthouse](https://web.dev/measure/) and [PageSpeed Insights](https://pagespeed.web.dev/) reports.
+- ✅ **Image optimization** and **Font optimization**.
+
+<br>
+
+<img src="./screenshot.jpg" alt="Qwind Theme Screenshot">
+
+[![onWidget](https://custom-icon-badges.demolab.com/badge/made%20by%20-onWidget-556bf2?style=flat-square&logo=onwidget&logoColor=white&labelColor=101827)](https://onwidget.com)
+[![License](https://img.shields.io/github/license/onwidget/qwind?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/onwidget/qwind/blob/main/LICENSE.md)
+[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/onwidget)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/onwidget/qwind#contributing)
+[![Known Vulnerabilities](https://snyk.io/test/github/onwidget/qwind/badge.svg?style=flat-square)](https://snyk.io/test/github/onwidget/qwind)
+
+<br>
+
+<details open>
+<summary>Table of Contents</summary>
+
+- [Demo](#demo)
+- [Getting started](#getting-started)
+  - [Project structure](#project-structure)
+  - [Commands](#commands)
+  - [Configuration](#configuration)
+  - [Deploy](#deploy)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
+</details>
+
+<br>
+
+## Demo
+
+📌 [https://qwind.pages.dev/](https://qwind.pages.dev/)
+
+<br>
+
+## Getting started
 
 This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just a extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
 
-Inside your project, you'll see the following directory structure:
+### Project structure
+
+Inside **Qwind** template, you'll see the following folders and files:
 
 ```
+/
+├── adaptors/
+|   └── static/
+|       └── vite.config.ts
 ├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
+│   ├── favicon.svg
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── assets/
+│   │   ├── images/
+|   |   └── styles/
+|   |       └── global.css
+│   ├── components/
+│   │   ├── atoms/
+│   │   ├── core/
+│   │   ├── icons/
+|   |   └── widgets/
+|   |       ├── Header.astro
+|   |       ├── Footer.astro
+|   |       └── ...
+│   ├── routes/
+│   |   ├── blog/
+│   |   ├── index.astro
+|   |   ├── layout.tsx
+|   |   └-- service-worker.ts
+│   ├── config.mjs
+│   ├── entry.dev.tsx
+│   ├── entry.preview.tsx
+│   ├── entry.ssr.tsx
+│   └── root.tsx
+├── package.json
+└── ...
 ```
 
 - `src/routes`: Provides the directory based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
@@ -30,42 +97,86 @@ Inside your project, you'll see the following directory structure:
 
 - `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
 
-## Add Integrations and deployment
+[![Edit Qwik on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/qwik/tree/main)
 
-Use the `npm run qwik add` command to add additional integrations. Some examples of integrations include: Cloudflare, Netlify or Express server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/static-site-generation/static-site-config/).
+> **Seasoned qwik expert?** Delete this file. Update `config.mjs` and contents. Have fun!
+
+<br>
+
+### Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command               | Action                                             |
+| :-------------------- | :------------------------------------------------- |
+| `npm install`         | Installs dependencies                              |
+| `npm run dev`         | Starts local dev server at `127.0.0.1:5173/`       |
+| `npm run build`       | Build your production site to `./dist/`            |
+| `npm run preview`     | Preview your build locally, before deploying       |
+| `npm run fmt`         | Format codes with Prettier                         |
+| `npm run lint`        | Run Eslint                                         |
+| `npm run qwik ...`    | Run CLI commands like `qwik add`, `qwik build` |
+
+<br>
+
+### Configuration
+
+Basic configuration file: `./src/config.mjs`
+
+```javascript
+export const SITE = {
+  name: 'Example',
+
+  origin: 'https://example.com',
+  basePathname: '/', // Change this if you need to deploy to Github Pages, for example
+};
+```
+
+<br>
+
+### Deploy
+
+#### Deploy to production (manual)
+
+You can create an optimized production build with:
 
 ```shell
-npm run qwik add # or `yarn qwik add`
+npm run build
 ```
 
-## Development
+Now, your website is ready to be deployed. All generated files are located at
+`dist` folder, which you can deploy the folder to any hosting service you
+prefer.
 
-Development mode uses [Vite's development server](https://vitejs.dev/). During development, the `dev` command will server-side render (SSR) the output.
+#### Deploy to Netlify
 
-```shell
-npm start # or `yarn start`
-```
+Clone this repository on own GitHub account and deploy to Netlify:
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/onwidget/qwind)
 
-## Preview
+#### Deploy to Vercel
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to locally preview a production build, and it should not be used as a production server.
+Clone this repository on own GitHub account and deploy to Vercel:
 
-```shell
-npm run preview # or `yarn preview`
-```
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonwidget%2Fqwind)
 
-## Production
+<br>
 
-The production build will generate client and server modules by running both client and server build commands. Additionally, the build command will use Typescript to run a type check on the source code.
+## Roadmap
 
-```shell
-npm run build # or `yarn build`
-```
+- Pending ...
 
-## Static Site Generator (Node.js)
+<br>
 
-```
-npm run build.server
-```
+## Contributing
+
+If you have any idea, suggestions or find any bugs, feel free to open a discussion, an issue or create a pull request.
+That would be very useful for all of us and we would be happy to listen and take action.
+
+## Acknowledgements
+
+Initially created by [onWidget](https://onwidget.com) and maintained by a community of [contributors](https://github.com/onwidget/qwind/graphs/contributors).
+
+## License
+
+**Qwind** is licensed under the MIT license — see the [LICENSE](https://github.com/onwidget/qwind/blob/main/LICENSE.md) file for details.
