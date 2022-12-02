@@ -94,7 +94,7 @@ Inside **Qwind** template, you'll see the following folders and files:
 
 - `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
 
-[![Edit Qwik on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/qwik/tree/main)
+[![Edit Qwind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/qwind/tree/main)
 
 > **Seasoned qwik expert?** Delete this file. Update `config.mjs` and contents. Have fun!
 
