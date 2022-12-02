@@ -2,7 +2,8 @@ import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import Logo from "~/components/atoms/Logo";
 import { IconGithub } from "~/components/icons/IconGithub";
-import { IconSun } from "~/components/icons/IconSun";
+import ToggleTheme from "~/components/core/ToggleTheme";
+import ToggleMenu from "~/components/core/ToggleMenu";
 
 export default component$(() => {
   return (
@@ -16,8 +17,8 @@ export default component$(() => {
             <Logo />
           </Link>
           <div class="flex items-center md:hidden">
-            {/* <ToggleTheme /> */}
-            {/* <ToggleMenu /> */}
+            <ToggleTheme iconClass="w-6 h-6" />
+            <ToggleMenu iconClass="w-6 h-6" />
           </div>
         </div>
         <nav
@@ -30,7 +31,7 @@ export default component$(() => {
                 Pages
               </button>
               <ul class="dropdown-menu rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white md:min-w-[200px] dark:md:bg-slate-800 drop-shadow-xl">
-                <li class="">
+                <li>
                   <Link
                     class="rounded-t md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
                     href="#"
@@ -38,15 +39,12 @@ export default component$(() => {
                     Features
                   </Link>
                 </li>
-                <li class="">
-                  <Link
-                    class="md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
-                    href="#"
-                  >
+                <li>
+                  <Link class="md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap" href="#">
                     Profile
                   </Link>
                 </li>
-                <li class="">
+                <li>
                   <Link
                     class="rounded-b md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
                     href="#"
@@ -83,22 +81,14 @@ export default component$(() => {
           </ul>
           <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
             <div class="hidden items-center md:flex">
-              {/* <ToggleTheme iconClass="w-5 h-5" /> */}
-              <Link
-                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                aria-label="RSS Feed"
-                href={"/rss.xml"}
-              >
-                {/* <Icon name="tabler:rss" class="w-5 h-5" /> */}
-                <IconSun />
-              </Link>
-              <Link
+              <ToggleTheme />
+              <a
                 href="https://github.com/onwidget/qwind"
                 class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
                 aria-label="Qwind Github"
               >
                 <IconGithub />
-              </Link>
+              </a>
             </div>
           </div>
         </nav>
