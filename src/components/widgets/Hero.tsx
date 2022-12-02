@@ -10,7 +10,7 @@ export default component$(() => {
     <section>
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="py-12 md:py-12 lg:py-16 block md:flex text-center md:text-left">
-          <div class="pb-10 md:py-0 lg:py-16 max-w-5xl mx-auto md:pr-16 flex items-center">
+          <div class="pb-10 md:py-0 lg:py-16 max-w-5xl mx-auto md:pr-16 flex items-center basis-3/5">
             <div>
               <h1 class="lg:mt-10 text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
                 Free template for <br class="hidden lg:block" />{" "}
@@ -49,7 +49,7 @@ export default component$(() => {
               </div>
             </div>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center flex-1">
             <div class="relative m-auto max-w-4xl">
               <picture>
                 <source scrset={srcsetAvif} type="image/avif" />
