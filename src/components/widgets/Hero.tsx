@@ -67,7 +67,7 @@ export default component$(() => {
                   height={1250}
                   class="mx-auto w-full rounded-md md:h-full bg-gray-400 dark:bg-slate-700"
                   alt="Hero Image"
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                 />
               </picture>
