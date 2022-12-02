@@ -12,9 +12,9 @@ export default component$(() => {
     <section>
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="py-12 md:py-12 lg:py-16 block md:flex text-center md:text-left">
-          <div class="pb-0 md:py-0 lg:py-16 max-w-5xl mx-auto md:pr-16 flex items-center basis-3/5">
+          <div class="pb-0 md:py-0 lg:py-16 max-w-5xl mx-auto md:pr-16 flex items-center basis-[56%]">
             <div>
-              <h1 class="lg:mt-10 text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
+              <h1 class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
                 Free template for <br class="hidden lg:block" />{" "}
                 <span class="hidden lg:inline">create a website using </span>{" "}
                 <span class="text-[#039de1]">Qwik</span> +{" "}
