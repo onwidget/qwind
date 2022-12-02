@@ -22,6 +22,7 @@
   "devDependencies": {
     "@builder.io/qwik": "0.14.0",
     "@builder.io/qwik-city": "0.0.124",
+    "@fontsource/inter": "^4.5.14",
     "@iconify-json/tabler": "^1.1.49",
     "@types/eslint": "8.4.10",
     "@types/node": "latest",
