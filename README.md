@@ -1,8 +1,5 @@
 # ⚡️ Qwind
 
-<img src="lighthouse-score.png" align="right"
-     alt="Qwind Lighthouse Score" width="100" height="358">
-
 **Qwind** is a free and open-source template to make your website using **Qwik + Tailwind CSS**. Ready to start a new project and designed taking into account best practices.
 
 ## Features
