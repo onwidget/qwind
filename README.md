@@ -167,7 +167,7 @@ Clone this repository on own GitHub account and deploy to Vercel:
 - [ ] Create component to make SEO simpler and more intuitive.
 - [ ] Find or develop an integration to generate sitemap.xml.
 - [ ] Create configurable blog with categories, tags and authors using MDX.
-- [ ] Add more frequently used pages (Profile, Services, Contact, Docs ...).
+- [ ] Add more frequently used pages (Portfolio, Services, Contact, Docs ...).
 - [ ] Find or create a library to have more icon sources available.
 - [ ] Refactor some code that doesn't follow Qwik conventions yet.
 
