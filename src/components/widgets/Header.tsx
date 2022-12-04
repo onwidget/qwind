@@ -1,14 +1,29 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStore } from "@builder.io/qwik";
 import Logo from "~/components/atoms/Logo";
 import { IconGithub } from "~/components/icons/IconGithub";
 import ToggleTheme from "~/components/core/ToggleTheme";
 import ToggleMenu from "~/components/core/ToggleMenu";
 
 export default component$(() => {
+  const store = useStore({
+    isScrolling: false,
+  });
+
   return (
     <header
-      class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm"
+      class={`sticky top-0 z-40 flex-none mx-auto w-full transition-all ${
+        store.isScrolling
+          ? " md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-white dark:bg-slate-900"
+          : ""
+      }`}
       id="header"
+      window:onScroll$={() => {
+        if (!store.isScrolling && window.scrollY >= 10) {
+          store.isScrolling = true;
+        } else if (store.isScrolling && window.scrollY < 10) {
+          store.isScrolling = false;
+        }
+      }}
     >
       <div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
         <div class="flex justify-between">
