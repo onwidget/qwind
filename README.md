@@ -94,7 +94,7 @@ Inside **Qwind** template, you'll see the following folders and files:
 
 - `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
 
-[![Edit Qwik on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/qwik/tree/main)
+[![Edit Qwind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/qwind/tree/main)
 
 > **Seasoned qwik expert?** Delete this file. Update `config.mjs` and contents. Have fun!
 
@@ -161,7 +161,21 @@ Clone this repository on own GitHub account and deploy to Vercel:
 
 ## Roadmap
 
-- Pending ...
+### Base
+- [ ] Create utilities to generate permalinks tailored to the domain and base pathname.
+- [ ] Simplify the way to optimize images.
+- [ ] Create component to make SEO simpler and more intuitive.
+- [ ] Find or develop an integration to generate sitemap.xml.
+- [ ] Create configurable blog with categories, tags and authors using MDX.
+- [ ] Add more frequently used pages (Portfolio, Services, Contact, Docs ...).
+- [ ] Find or create a library to have more icon sources available.
+- [ ] Refactor some code that doesn't follow Qwik conventions yet.
+
+### Advanced
+
+- [ ] Achieve perfect 100% Google Page Speed score.
+- [ ] Insert complex javascript example widget on home page to demonstrate Qwik features.
+- [ ] Create small illustrative admin backend.
 
 <br>
 
