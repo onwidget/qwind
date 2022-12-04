@@ -43,9 +43,10 @@ export default component$((props: ItemProps) => {
       }}
     >
       {store.theme == "dark" ? (
-        <IconSun class={iconClass} />
-      ) : (
         <IconMoon class={iconClass} />
+      ) : (
+        <IconSun class={iconClass} />
+        
       )}
     </button>
   );
