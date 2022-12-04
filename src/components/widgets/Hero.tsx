@@ -1,18 +1,18 @@
 import { component$ } from "@builder.io/qwik";
 
 // @ts-ignore
-import srcsetAvif from "~/assets/images/hero.jpg?w=300;600&avif&srcset";
+import srcsetAvif from "~/assets/images/hero.jpg?w=400;900&avif&srcset";
 // @ts-ignore
-import srcsetWebp from "~/assets/images/hero.jpg?w=300;600&webp&srcset";
+import srcsetWebp from "~/assets/images/hero.jpg?w=400;900&webp&srcset";
 // @ts-ignore
-import { src as placeholder } from "~/assets/images/hero.jpg?width=300&metadata";
+import { src as placeholder } from "~/assets/images/hero.jpg?width=400&metadata";
 
 export default component$(() => {
   return (
-    <section class="bg-gradient-to-b from-[#fff] via-purple-50 to-sky-100 dark:bg-none">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:flex md:h-screen md:pt-12 2xl:h-auto">
+    <section class="bg-gradient-to-b from-white via-purple-50 to-sky-100 dark:bg-none">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:flex md:h-[calc(100vh-72px)] 2xl:h-auto">
         <div class="py-12 md:py-12 lg:py-16 block md:flex text-center md:text-left">
-          <div class="pb-12 md:py-0 lg:py-16 max-w-5xl mx-auto md:pr-16 flex items-center basis-[56%]">
+          <div class="pb-12 md:py-0 lg:pb-16 max-w-5xl mx-auto md:pr-16 flex items-center basis-[56%]">
             <div>
               <h1 class="text-5xl md:text-[3.48rem] font-bold leading-tighter tracking-tighter mb-4 font-heading px-4 md:px-0">
                 Free template for <br class="hidden lg:block" />{" "}
@@ -66,7 +66,7 @@ export default component$(() => {
                   width={1000}
                   height={1250}
                   class="mx-auto w-full rounded-md md:h-full drop-shadow-2xl bg-gray-400 dark:bg-slate-700"
-                  alt="Hero Image"
+                  alt="Qwind Hero Image (Cool dog)"
                   loading="eager"
                   decoding="async"
                 />

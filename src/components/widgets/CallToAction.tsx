@@ -21,7 +21,7 @@ export default component$(() => {
 
             <div class="mt-6">
               <a
-                class="btn btn-primary mb-4 sm:mb-0"
+                class="btn btn-primary mb-4 sm:mb-0 w-full sm:w-auto"
                 href="https://github.com/onwidget/qwind"
                 target="_blank"
                 rel="noopener"
