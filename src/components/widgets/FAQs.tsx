@@ -44,6 +44,9 @@ export default component$(() => {
     <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
       <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
         <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <p class="text-base text-primary-600 dark:text-purple-200 font-semibold tracking-wide uppercase">
+            FAQs
+          </p>
           <h2 class="max-w-lg mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">
             Frequently Asked Questions
           </h2>
@@ -56,7 +59,7 @@ export default component$(() => {
               {subitems.map(({ question, answer }) => (
                 <div>
                   <p class="mb-4 text-xl font-bold">
-                    <IconArrowDownRight />
+                    <IconArrowDownRight class="w-7 h-7 text-secondary-500 inline-block" />
                     {question}
                   </p>
                   {answer.split("\n\n").map((paragraph) => (
