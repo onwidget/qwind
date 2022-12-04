@@ -4,7 +4,6 @@ import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from "@builder.
 import { RouterHead } from "~/components/core/RouterHead";
 import { DarkThemeLauncher } from "~/components/core/DarkThemeLauncher";
 
-import interFontStyles from "@fontsource/inter/variable.css?inline";
 import globalStyles from "~/assets/styles/global.css?inline";
 
 export default component$(() => {
@@ -15,7 +14,6 @@ export default component$(() => {
    * Dont remove the `<head>` and `<body>` elements.
    */
 
-  useStyles$(interFontStyles);
   useStyles$(globalStyles);
 
   return (
