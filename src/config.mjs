@@ -3,5 +3,5 @@ export const SITE = {
 
   origin: "https://qwind.pages.dev",
   basePathname: "/",
-  trailingSlash: false
+  trailingSlash: true
 };
