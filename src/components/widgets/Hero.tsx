@@ -12,7 +12,7 @@ export default component$(() => {
     <section class={`bg-gradient-to-b md:bg-gradient-to-r from-white via-purple-50 to-sky-100 dark:bg-none mt-[-72px]`}>
       <div class="max-w-6xl mx-auto px-4 sm:px-6 md:flex md:h-screen 2xl:h-auto pt-[72px]">
         <div class="py-12 md:py-12 lg:py-16 block md:flex text-center md:text-left">
-          <div class="pb-12 md:pb-0 md:py-0 lg:pb-16 max-w-5xl mx-auto md:pr-16 flex items-center basis-[56%]">
+          <div class="pb-12 md:pb-0 md:py-0 max-w-5xl mx-auto md:pr-16 flex items-center basis-[56%]">
             <div>
               <h1 class="text-5xl md:text-[3.48rem] font-bold leading-tighter tracking-tighter mb-4 font-heading px-4 md:px-0">
                 Free template for <br class="hidden lg:block" />{" "}
