@@ -17,7 +17,7 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "subfont": "subfont -ir --inline-css --no-fallbacks --silent --root dist",
+    "subfont": "subfont -i --inline-css --no-fallbacks --silent --root dist",
     "qwik": "qwik"
   },
   "devDependencies": {
