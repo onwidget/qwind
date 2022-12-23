@@ -59,10 +59,10 @@ export default component$(() => {
             <div class="space-y-8">
               {subitems.map(({ question, answer }) => (
                 <div>
-                  <p class="mb-4 text-xl font-bold">
+                  <h3 class="mb-4 text-xl font-bold">
                     <IconArrowDownRight class="w-7 h-7 text-secondary-500 inline-block" />
                     {question}
-                  </p>
+                  </h3>
                   {answer.split("\n\n").map((paragraph) => (
                     <p class="text-gray-700 dark:text-gray-400 mb-2">
                       {paragraph}
