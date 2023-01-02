@@ -74,6 +74,11 @@ Inside **Qwind** template, you'll see the following folders and files:
 |   |       ├── Header.astro
 |   |       ├── Footer.astro
 |   |       └── ...
+│   ├── content/
+│   |   ├── blog/
+│   |   |   ├── post-slug-1.md
+│   |   |   ├── post-slug-2.md
+│   |   |   └── ...
 │   ├── routes/
 │   |   ├── blog/
 │   |   ├── index.astro
@@ -104,15 +109,15 @@ Inside **Qwind** template, you'll see the following folders and files:
 
 All commands are run from the root of the project, from a terminal:
 
-| Command               | Action                                             |
-| :-------------------- | :------------------------------------------------- |
-| `npm install`         | Installs dependencies                              |
-| `npm run dev`         | Starts local dev server at `127.0.0.1:5173/`       |
-| `npm run build`       | Build your production site to `./dist/`            |
-| `npm run preview`     | Preview your build locally, before deploying       |
-| `npm run fmt`         | Format codes with Prettier                         |
-| `npm run lint`        | Run Eslint                                         |
-| `npm run qwik ...`    | Run CLI commands like `qwik add`, `qwik build` |
+| Command            | Action                                         |
+| :----------------- | :--------------------------------------------- |
+| `npm install`      | Installs dependencies                          |
+| `npm run dev`      | Starts local dev server at `127.0.0.1:5173/`   |
+| `npm run build`    | Build your production site to `./dist/`        |
+| `npm run preview`  | Preview your build locally, before deploying   |
+| `npm run fmt`      | Format codes with Prettier                     |
+| `npm run lint`     | Run Eslint                                     |
+| `npm run qwik ...` | Run CLI commands like `qwik add`, `qwik build` |
 
 <br>
 
@@ -122,10 +127,10 @@ Basic configuration file: `./src/config.mjs`
 
 ```javascript
 export const SITE = {
-  name: 'Example',
+  name: "Example",
 
-  origin: 'https://example.com',
-  basePathname: '/', // Change this if you need to deploy to Github Pages, for example
+  origin: "https://example.com",
+  basePathname: "/", // Change this if you need to deploy to Github Pages, for example
   trailingSlash: true, // Generate permalinks with or without "/" at the end
 };
 ```
@@ -163,6 +168,7 @@ Clone this repository on own GitHub account and deploy to Vercel:
 ## Roadmap
 
 ### Base
+
 - [ ] Create utilities to generate permalinks tailored to the domain and base pathname.
 - [ ] Simplify the way to optimize images.
 - [ ] Create component to make SEO simpler and more intuitive.

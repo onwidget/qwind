@@ -76,7 +76,8 @@ export default component$(() => {
               </Link>
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              sagittis, quam nec venenatis lobortis, mi risus tempus nulla
             </div>
           </div>
           {links.map(({ title, items }) => (

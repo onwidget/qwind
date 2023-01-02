@@ -4,16 +4,21 @@ import { qwikCity } from "@builder.io/qwik-city/vite";
 import { imagetools } from "vite-imagetools";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-import { SITE } from "./src/config.mjs"
+import { SITE } from "./src/config.mjs";
 
 const path = require("path");
 
 export default defineConfig(() => {
   return {
-    plugins: [qwikCity({
-      basePathname: SITE.basePathname,
-      trailingSlash: SITE.trailingSlash,
-    }), qwikVite(), tsconfigPaths(), imagetools()],
+    plugins: [
+      qwikCity({
+        basePathname: SITE.basePathname,
+        trailingSlash: SITE.trailingSlash,
+      }),
+      qwikVite(),
+      tsconfigPaths(),
+      imagetools(),
+    ],
     preview: {
       headers: {
         "Cache-Control": "public, max-age=600",

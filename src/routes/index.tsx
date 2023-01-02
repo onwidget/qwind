@@ -7,6 +7,8 @@ import FAQs from "~/components/widgets/FAQs";
 import Stats from "~/components/widgets/Stats";
 import CallToAction from "~/components/widgets/CallToAction";
 
+import { SITE } from "~/config.mjs";
+
 export default component$(() => {
   return (
     <>
@@ -20,12 +22,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Qwind — Free template for starts a website using Qwik + Tailwind CSS",
+  title: SITE.title,
   meta: [
     {
       name: "description",
-      content:
-        "Qwind is a free and ready to start template to make your website using Qwik and Tailwind CSS.",
+      content: SITE.description,
     },
   ],
 };

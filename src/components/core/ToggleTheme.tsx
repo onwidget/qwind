@@ -46,7 +46,6 @@ export default component$((props: ItemProps) => {
         <IconMoon class={iconClass} />
       ) : (
         <IconSun class={iconClass} />
-        
       )}
     </button>
   );

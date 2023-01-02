@@ -1,5 +1,9 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
-import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from "@builder.io/qwik-city";
+import {
+  QwikCityProvider,
+  RouterOutlet,
+  ServiceWorkerRegister,
+} from "@builder.io/qwik-city";
 
 import { RouterHead } from "~/components/core/RouterHead";
 import { DarkThemeLauncher } from "~/components/core/DarkThemeLauncher";
@@ -22,7 +26,10 @@ export default component$(() => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
         <RouterHead />
         <DarkThemeLauncher />
       </head>
