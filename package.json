@@ -1,7 +1,7 @@
 {
   "name": "qwind",
   "description": "A template to make your website using Qwik + Tailwind CSS.",
-  "version": "0.1.2",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "build": "qwik build",
@@ -26,6 +26,7 @@
     "@builder.io/qwik-city": "0.0.128",
     "@iconify-json/tabler": "^1.1.54",
     "@tailwindcss/typography": "^0.5.8",
+    "@fontsource/inter": "^4.5.14",
     "@types/eslint": "8.4.10",
     "@types/markdown-it": "^12.2.3",
     "@types/node": "latest",
