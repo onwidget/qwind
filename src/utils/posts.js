@@ -1,8 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
-import { join } from "path";
 
-const BLOG_DIR = join(process.cwd(), "src", "content", "blog");
+const BLOG_DIR = "src/content/blog";
 
 const load = () => {
   const files = fs.readdirSync(BLOG_DIR);
@@ -59,7 +58,7 @@ export const findPostBySlug = async (slug) => {
   if (!slug) return null;
 
   try {
-    const readFile = fs.readFileSync(join(BLOG_DIR, `${slug}.md`), "utf-8");
+    const readFile = fs.readFileSync(BLOG_DIR + `/${slug}.md`, "utf-8");
     const { data: frontmatter, content } = matter(readFile);
     return {
       slug,
