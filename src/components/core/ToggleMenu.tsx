@@ -20,7 +20,6 @@ export default component$((props: ItemProps) => {
         store.isExpanded ? "expanded" : ""
       }`}
       aria-label="Toggle Menu"
-      data-aw-toggle-menu={true}
       onClick$={() => {
         store.isExpanded = store.isExpanded ? false : true;
 
