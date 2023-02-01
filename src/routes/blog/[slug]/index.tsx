@@ -23,8 +23,8 @@ export default component$(() => {
           <article>
             <header class={post?.image ? "text-center" : ""}>
               <p class="mx-auto max-w-3xl px-4 sm:px-6">
-                <time dateTime={post.publishDate}>{post.publishDate}</time> ~{" "}
-                {/* {Math.ceil(post.readingTime)} min read */}
+                <time dateTime={post.publishDate}>{post.publishDate}</time>
+                {/* ~{" "} {Math.ceil(post.readingTime)} min read */}
               </p>
               <h1 class="leading-tighter font-heading mx-auto mb-8 max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl">
                 {post.title}
