@@ -1,7 +1,7 @@
 {
   "name": "qwind",
   "description": "A template to make your website using Qwik + Tailwind CSS.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "scripts": {
     "build": "qwik build && jampack ./dist",
@@ -22,19 +22,19 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "0.16.2",
+    "@builder.io/qwik": "0.17.4",
     "@builder.io/qwik-city": "0.0.128",
     "@divriots/jampack": "^0.8.1",
     "@fontsource/inter": "^4.5.15",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/eslint": "8.4.10",
+    "@types/eslint": "8.21.0",
     "@types/markdown-it": "^12.2.3",
     "@types/node": "latest",
-    "@typescript-eslint/eslint-plugin": "5.50.0",
-    "@typescript-eslint/parser": "5.50.0",
+    "@typescript-eslint/eslint-plugin": "5.51.0",
+    "@typescript-eslint/parser": "5.51.0",
     "autoprefixer": "10.4.13",
     "eslint": "8.33.0",
-    "eslint-plugin-qwik": "0.16.2",
+    "eslint-plugin-qwik": "0.17.4",
     "gray-matter": "^4.0.3",
     "imagetools-core": "^3.3.1",
     "markdown-it": "^13.0.1",
@@ -44,7 +44,7 @@
     "subfont": "^6.12.4",
     "tailwindcss": "^3.2.4",
     "typescript": "4.9.5",
-    "vite": "4.0.4",
+    "vite": "4.1.1",
     "vite-imagetools": "^4.0.18",
     "vite-tsconfig-paths": "4.0.5"
   },
