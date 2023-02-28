@@ -5,7 +5,7 @@ export default component$(() => {
   const items = [
     [
       {
-        question: "What do I need to start?",
+        question: "Welche Vorteile bringt mir der Wiener Verein?",
         answer: `Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.
 
     Many say exploration is part of our destiny, but it’s actually our duty to future generations.`,
@@ -45,11 +45,11 @@ export default component$(() => {
       <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
         <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
           <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <p class="text-base text-primary-600 dark:text-purple-200 font-semibold tracking-wide uppercase">
+            <p class="text-base text-third font-semibold tracking-wide uppercase">
               FAQs
             </p>
-            <h2 class="max-w-lg mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">
-              Frequently Asked Questions
+            <h2 class="max-w-lg mb-4 text-white text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">
+              Die wichtigsten Fragen
             </h2>
           </div>
         </div>
@@ -59,8 +59,8 @@ export default component$(() => {
               <div class="space-y-8">
                 {subitems.map(({ question, answer }) => (
                   <div>
-                    <h3 class="mb-4 text-xl font-bold">
-                      <IconArrowDownRight class="w-7 h-7 text-secondary-500 inline-block" />
+                    <h3 class="mb-4 text-xl font-bold text-white">
+                      <IconArrowDownRight class="w-7 h-7 text-third inline-block" />
                       {question}
                     </h3>
                     {answer.split("\n\n").map((paragraph) => (

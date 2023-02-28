@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         primary: colors.purple,
         secondary: colors.sky,
+        third: '#D1AF68',
+        fourth: '#252B42',
       },
       fontFamily: {
         sans: ["'Inter'", ...defaultTheme.fontFamily.sans],

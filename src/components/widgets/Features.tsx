@@ -46,33 +46,33 @@ export default component$(() => {
   ];
 
   return (
-    <section class="scroll-mt-16" id="features">
+    <section class="scroll-mt-16 bg-fourth" id="features">
       <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
-        <div class="mb-10 md:mx-auto sm:text-center md:mb-12 max-w-3xl">
-          <p class="text-base text-primary-600 dark:text-purple-200 font-semibold tracking-wide uppercase">
-            Features
+        <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+          <p class="text-base text-white font-semibold tracking-wide uppercase">
+            Gründe
           </p>
-          <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
-            What you get with <span class="whitespace-nowrap">Qwind</span>
+          <h2 class="text-4xl md:text-5xl text-third font-bold leading-tighter tracking-tighter mb-4 font-heading">
+            Warum Wiener Verein?
           </h2>
-          <p class="max-w-3xl mx-auto sm:text-center text-xl text-gray-600 dark:text-slate-400">
+          <p class="max-w-3xl mx-auto sm:text-center text-xl text-slate-400">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque rem aperiam, eaque ipsa quae.
           </p>
         </div>
-        <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
+        <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0 justify-center">
           {items.map((subitems) => (
             <div class="space-y-8 sm:px-8">
               {subitems.map(({ title, description }) => (
-                <div class="flex flex-row max-w-md">
+                <div key={title} class="flex flex-col max-w-md items-center p-6 bg-white rounded-xl text-center md:h-60">
                   <div class="mb-4 mr-4">
-                    <div class="text-white flex items-center justify-center w-12 h-12 rounded-full bg-secondary-500 dark:bg-secondary-700">
+                    <div class="text-white flex items-center justify-center w-12 h-12 rounded-full bg-third">
                       <IconStar />
                     </div>
                   </div>
                   <div>
-                    <h3 class="mb-3 text-xl font-bold">{title}</h3>
-                    <p class="text-gray-600 dark:text-slate-400">
+                    <h3 class="mb-3 text-xl text-black font-bold">{title}</h3>
+                    <p class="text-gray-600">
                       {description}
                     </p>
                   </div>

@@ -8,12 +8,14 @@ import Stats from "~/components/widgets/Stats";
 import CallToAction from "~/components/widgets/CallToAction";
 
 import { SITE } from "~/config.mjs";
+import LeftSection from "~/components/widgets/LeftSection";
 
 export default component$(() => {
   return (
     <>
       <Hero />
       <Features />
+      <LeftSection />
       <FAQs />
       <Stats />
       <CallToAction />

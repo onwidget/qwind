@@ -14,9 +14,9 @@ export default component$(() => {
 
   return (
     <header
-      class={`sticky top-0 z-40 flex-none mx-auto w-full transition-all${
+      class={`fixed top-0 z-40 flex-none mx-auto w-full transition-all${
         store.isScrolling
-          ? " md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-white dark:bg-slate-900"
+          ? " md:backdrop-blur-sm md:bg-slate-900/90  bg-slate-900"
           : ""
       }`}
       id="header"
@@ -40,7 +40,7 @@ export default component$(() => {
         </div>
         <div class="md:self-center flex items-center mb-4 md:mb-0 ml-4">
           <nav
-            class="items-center w-full md:w-auto hidden md:flex text-gray-500 dark:text-slate-200 h-[calc(100vh-100px)] md:h-auto overflow-y-auto md:overflow-visible pr-4"
+            class="items-center w-full md:w-auto hidden md:flex text-white h-[calc(100vh-100px)] md:h-auto overflow-y-auto md:overflow-visible pr-4"
             aria-label="Main navigation"
           >
             {menu && menu.items ? (
@@ -81,13 +81,12 @@ export default component$(() => {
           </nav>
 
           <div class="hidden items-center md:flex">
-            <ToggleTheme iconClass="w-6 h-6" />
             <a
               href="https://github.com/onwidget/qwind"
-              aria-label="Qwind Github"
-              class="ml-3 btn btn-primary w-full h-10 px-5 shadow-none text-base"
+              aria-label="Kontakt Page"
+              class="ml-3 btn bg-third w-full h-10 px-5 shadow-none text-base border-none"
             >
-              Download
+              <p class="text-white">Kontakt</p>
             </a>
           </div>
         </div>
