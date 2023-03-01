@@ -8,10 +8,6 @@ export default component$(() => {
         value: false
     });
 
-    function VideoPopUp() {
-        popUpState.value = !popUpState.value;
-    }
-
     return (
         
         <section class="bg-white">
