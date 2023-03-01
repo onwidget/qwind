@@ -2,7 +2,6 @@ import { component$, useStore } from "@builder.io/qwik";
 import { useContent } from "@builder.io/qwik-city";
 
 import Logo from "~/components/atoms/Logo";
-import ToggleTheme from "~/components/core/ToggleTheme";
 import ToggleMenu from "~/components/core/ToggleMenu";
 
 export default component$(() => {
