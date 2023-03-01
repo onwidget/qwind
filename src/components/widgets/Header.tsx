@@ -34,7 +34,6 @@ export default component$(() => {
             <Logo />
           </a>
           <div class="flex items-center md:hidden">
-            <ToggleTheme iconClass="w-6 h-6" />
             <ToggleMenu iconClass="w-6 h-6" />
           </div>
         </div>

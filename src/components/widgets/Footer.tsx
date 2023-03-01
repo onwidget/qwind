@@ -45,7 +45,7 @@ export default component$(() => {
   ];
 
   return (
-    <footer class="border-t border-gray-200 text-white">
+    <footer class="border-t border-gray-200 text-white bg-fourth">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
           <div class="col-span-12 lg:col-span-4 pr-8">
@@ -54,7 +54,7 @@ export default component$(() => {
                 Wiener Verein
               </Link>
             </div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">
+            <div class="text-sm text-gray-400">
               Die Bestattungsvorsorge für Tirol und Voralrberg
             </div>
           </div>
@@ -68,7 +68,7 @@ export default component$(() => {
                   {items.map(({ title, href }) => (
                     <li class="mb-2">
                       <Link
-                        class="text-gray-600 hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+                        class="hover:text-gray-500 text-gray-400 transition duration-150 ease-in-out"
                         href={href}
                       >
                         {title}
@@ -85,7 +85,7 @@ export default component$(() => {
             {social.map(({ label, href, icon: Icon }) => (
               <li>
                 <Link
-                  class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                  class="text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                   aria-label={label}
                   title={label}
                   href={href}
@@ -96,10 +96,10 @@ export default component$(() => {
             ))}
           </ul>
 
-          <div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
+          <div class="text-sm  mr-4 text-slate-400">
             Made by{" "}
             <a
-              class="text-secondary-700 hover:underline dark:text-gray-200"
+              class="text-third hover:underline"
               href="https://janikhalder.at/"
             >
               {" "}

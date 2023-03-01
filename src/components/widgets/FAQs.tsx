@@ -6,49 +6,43 @@ export default component$(() => {
     [
       {
         question: "Welche Vorteile bringt mir der Wiener Verein?",
-        answer: `Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.
-
-    Many say exploration is part of our destiny, but it’s actually our duty to future generations.`,
+        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
       },
       {
-        question: "How to install the Qwik + Tailwind CSS template?",
-        answer: `Well, the way they make shows is, they make one show. That show's called a pilot.
-
-    Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.`,
+        question: "Kann jeder eine Bestattungsvorsorge abschließen?",
+        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
       },
       {
-        question: "What's something that you completely don't understand?",
-        answer: `A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.`,
+        question: "Kann jeder eine Bestattungsvorsorge abschließen?",
+        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
       },
     ],
     [
       {
-        question: "What's an example of when you changed your mind?",
-        answer: `Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.`,
+        question: "Kann jeder eine Bestattungsvorsorge abschließen?",
+        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
       },
       {
-        question: "What is something that you would really like to try again?",
-        answer: `A business big enough that it could be listed on the NASDAQ goes belly up. Disappears!
-
-      It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.`,
+        question: "Kann jeder eine Bestattungsvorsorge abschließen?",
+        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
       },
       {
         question:
-          "If you could only ask one question to each person you meet, what would that question be?",
-        answer: `This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.`,
+          "Kann jeder eine Bestattungsvorsorge abschließen?",
+        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.`,
       },
     ],
   ];
 
   return (
-    <section class="border-t border-gray-200 dark:border-slate-800">
+    <section class="border-t border-slate-800">
       <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
         <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
           <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
             <p class="text-base text-third font-semibold tracking-wide uppercase">
               FAQs
             </p>
-            <h2 class="max-w-lg mb-4 text-white text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">
+            <h2 class="max-w-lg mb-4 text-black text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">
               Die wichtigsten Fragen
             </h2>
           </div>
@@ -59,12 +53,12 @@ export default component$(() => {
               <div class="space-y-8">
                 {subitems.map(({ question, answer }) => (
                   <div>
-                    <h3 class="mb-4 text-xl font-bold text-white">
+                    <h3 class="mb-4 text-xl font-bold text-black">
                       <IconArrowDownRight class="w-7 h-7 text-third inline-block" />
                       {question}
                     </h3>
                     {answer.split("\n\n").map((paragraph) => (
-                      <p class="text-gray-700 dark:text-gray-400 mb-2">
+                      <p class="text-gray-700 mb-2">
                         {paragraph}
                       </p>
                     ))}

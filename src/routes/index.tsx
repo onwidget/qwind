@@ -6,19 +6,22 @@ import Features from "~/components/widgets/Features";
 import FAQs from "~/components/widgets/FAQs";
 import Stats from "~/components/widgets/Stats";
 import CallToAction from "~/components/widgets/CallToAction";
+import Price from "~/components/widgets/Price";
 
 import { SITE } from "~/config.mjs";
 import LeftSection from "~/components/widgets/LeftSection";
+import Video from "~/components/widgets/Video";
+import Contact from "~/components/widgets/Contact";
 
 export default component$(() => {
   return (
     <>
       <Hero />
       <Features />
-      <LeftSection />
+      <Video />
+      <Price />
       <FAQs />
-      <Stats />
-      <CallToAction />
+      <Contact />
     </>
   );
 });

@@ -1,0 +1,3 @@
+export const PlayVideo = () => (
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"><defs><style>.cls-1{isolation:isolate;}.cls-2{fill:#d6b469;mix-blend-mode:multiply;}.cls-3{fill:#fff;}</style></defs><g class="cls-1"><g id="Layer_2" data-name="Layer 2"><circle class="cls-2" cx="90" cy="90" r="90"/><path class="cls-3" d="M132.21,86.36a4.21,4.21,0,0,1,0,7.28l-32.08,18.69L68,131a4.2,4.2,0,0,1-6.3-3.6V52.57A4.2,4.2,0,0,1,68,49l32.1,18.7Z"/></g></g></svg>
+);

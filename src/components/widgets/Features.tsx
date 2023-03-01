@@ -5,42 +5,31 @@ export default component$(() => {
   const items = [
     [
       {
-        title: "Qwik + Tailwind CSS Integration",
-        description:
-          "A seamless integration between two great frameworks that offer high productivity, performance and versatility.",
+        title: "Die Nummer 1 in der Hinterbliebenenvorsorge.",
+        description: "Der WIENER VEREIN ist der einzige echte Spezialist auf diesem Sektor und beschäftigt sich fast ausschließlich mit der umfassenden Vorsorge für den Todesfall.",
         icon: "tabler:brand-tailwind",
       },
       {
-        title: "Ready-to-use Components",
+        title: "Kooperationspartner der Österreichischen Bestatter:",
         description:
-          "Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...",
+          "Der WIENER VEREIN hat seit Jahrzehnten Kooperationsvereinbarungen mit allen Bestattungsunternehmen Österreichs. Diese bewährte Zusammenarbeit garantiert eine reibungslose und pietätvolle Durchführung der versicherten Leistungen.",
         icon: "tabler:components",
-      },
-      {
-        title: "Best Practices",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
-        icon: "tabler:list-check",
       },
     ],
     [
       {
-        title: "Excellent Page Speed",
+        title: "Kompetenz und Know-How seit über 100 Jahren.",
         description:
-          "Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.",
+          "Rasche, unbürokratische Soforthilfe, hunderttausende Male bewährt!",
+        icon: "tabler:list-check",
+      },
+      {
+        title: "Leistungsstark",
+        description:
+          `Sofortschutz, Direktverrechnung mit Bestatter, lebenslanger Schutz, Ausrichtung der Bestattung nach persönlichen Wünschen – ob Feuer-,
+          Erd-, Wiesen-, Baum- oder Seebestattung, und je nach Leistungspaket möglich: Abdeckung der Nebenkosten, weltweites Überführungsservice
+          (Organisation und Bezahlung), Unfalltod-Zusatzversicherung und Digitaler Nachlass-Service.`,
         icon: "tabler:rocket",
-      },
-      {
-        title: "Search Engine Optimization (SEO)",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
-        icon: "tabler:arrows-right-left",
-      },
-      {
-        title: "Open to new ideas and contributions",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
-        icon: "tabler:bulb",
       },
     ],
   ];
@@ -64,7 +53,7 @@ export default component$(() => {
           {items.map((subitems) => (
             <div class="space-y-8 sm:px-8">
               {subitems.map(({ title, description }) => (
-                <div key={title} class="flex flex-col max-w-md items-center p-6 bg-white rounded-xl text-center md:h-60">
+                <div key={title} class="flex flex-col max-w-md items-center p-6 bg-white rounded-xl text-center md:h-96">
                   <div class="mb-4 mr-4">
                     <div class="text-white flex items-center justify-center w-12 h-12 rounded-full bg-third">
                       <IconStar />
