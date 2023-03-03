@@ -32,8 +32,8 @@ export default component$(() => {
             </div>
             {popUpState.value &&
             <qwik-fragment>
-            <div class="fixed z-50 inset-0 overflow-y-auto flex items-center justify-center" onClick$={() => (popUpState.value = false)}>
-              <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="fixed z-50 inset-0 overflow-y-auto flex items-center justify-center">
+              <div class="fixed inset-0 transition-opacity" aria-hidden="true" onClick$={() => (popUpState.value = false)}>
                 <div class="absolute inset-0 bg-black opacity-75"></div>
               </div>
               <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
