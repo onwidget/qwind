@@ -44,12 +44,12 @@ export default component$(() => {
       <div class="absolute h-full w-full overflow-hidden">
         <img
           src={heroImage} 
-          class="h-full min-w-full max-w-none bg-blend-overlay object-fill"
+          class="h-full min-w-full max-w-none bg-blend-overlay object-fill top-0"
           alt="Qwind Logo"
           loading="eager"
         />
       </div>
-      <div class="absolute z-100 bottom-0 left-0 w-full">
+      <div class="absolute z-100 bottom-0 left-0 w-screen overflow-hidden">
          <SpacerHeader />
       </div>
     </section>
