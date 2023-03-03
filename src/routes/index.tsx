@@ -5,6 +5,7 @@ import Hero from "~/components/widgets/Hero";
 import Features from "~/components/widgets/Features";
 import FAQs from "~/components/widgets/FAQs";
 import Price from "~/components/widgets/Price";
+import Marquee from "~/components/widgets/Marquee";
 
 import { SITE } from "~/config.mjs";
 import Video from "~/components/widgets/Video";
@@ -18,6 +19,7 @@ export default component$(() => {
       <Video />
       <Price />
       <FAQs />
+      <Marquee />
       <Contact />
     </>
   );

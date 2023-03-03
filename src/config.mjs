@@ -1,12 +1,12 @@
 export const SITE = {
-  name: "Qwind",
+  name: "Wiener Verein",
 
   title:
-    "Wiener Verein — Free template for Qwik + Tailwind CSS to build your new website.",
+    "Wiener Verein — Deine Bestattungsvorsorge für Tirol und Vorarlberg.",
   description:
     "Qwind is a free and ready to start template to make your website using Qwik and Tailwind CSS.",
 
-  origin: "https://qwind.pages.dev",
+  origin: "https://wvtirol.tirol",
   basePathname: "/",
   trailingSlash: true,
 };

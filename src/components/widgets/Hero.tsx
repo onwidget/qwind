@@ -20,9 +20,9 @@ export default component$(() => {
                   Jetzt vorsorgen für morgen
                 </p>
                 <div class="flex flex-nowrap flex-col sm:flex-row gap-4 m-auto md:m-0 justify-center md:justify-start">
-                  <div class="flex w-full">
+                  <div class="flex w-full justify-center">
                     <a
-                      class="text-white btn bg-third sm:mb-0 w-full border-none hover:text-black"
+                      class="text-white btn bg-third sm:mb-0 border-none hover:text-black"
                       href="https://github.com/onwidget/qwind"
                       target="_blank"
                       rel="noopener"
@@ -30,8 +30,8 @@ export default component$(() => {
                       <p class="text-white">Angebot anfragen</p>
                     </a>
                   </div>
-                  <div class="flex w-full">
-                    <button class="text-white w-full sm:mb-0 bg-transparent border-2 border-white btn">
+                  <div class="flex w-full justify-center">
+                    <button class="text-white sm:mb-0 bg-transparent border-2 border-white btn">
                       <p class="text-white">Kontakt</p>
                     </button>
                   </div>
@@ -41,10 +41,10 @@ export default component$(() => {
           </div>
         </div>
       </div>
-      <div class="absolute w-screen h-screen">
+      <div class="absolute h-full w-full overflow-hidden">
         <img
           src={heroImage} 
-          class="w-screen h-screen bg-blend-overlay"
+          class="h-full min-w-full max-w-none bg-blend-overlay object-fill"
           alt="Qwind Logo"
           loading="eager"
         />

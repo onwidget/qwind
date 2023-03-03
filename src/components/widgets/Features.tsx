@@ -45,15 +45,14 @@ export default component$(() => {
             Warum Wiener Verein?
           </h2>
           <p class="max-w-3xl mx-auto sm:text-center text-xl text-slate-400">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
+            Wir haben … Erfahrung im Bereich … und arbeiten mit unseren Kunden von …………
           </p>
         </div>
-        <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0 justify-center">
+        <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0 justify-center md:justify-between">
           {items.map((subitems) => (
-            <div class="space-y-8 sm:px-8">
+            <div class="space-y-8 sm:px-8 flex flex-col justify-between">
               {subitems.map(({ title, description }) => (
-                <div key={title} class="flex flex-col max-w-md items-center p-6 bg-white rounded-xl text-center md:h-96">
+                <div key={title} class="flex flex-col max-w-md items-center p-6 bg-white rounded-xl text-center h-full">
                   <div class="mb-4 mr-4">
                     <div class="text-white flex items-center justify-center w-12 h-12 rounded-full bg-third">
                       <IconStar />
@@ -61,7 +60,7 @@ export default component$(() => {
                   </div>
                   <div>
                     <h3 class="mb-3 text-xl text-black font-bold">{title}</h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 text-base">
                       {description}
                     </p>
                   </div>

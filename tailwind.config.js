@@ -16,6 +16,15 @@ module.exports = {
       fontFamily: {
         sans: ["'Inter'", ...defaultTheme.fontFamily.sans],
       },
+      animation: {
+        marquee: 'marquee 20s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0px)' },
+          '100%': { transform: 'translateX(calc(-8rem * 11.75))' },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
