@@ -35,7 +35,7 @@ export default component$(() => {
   ];
 
   return (
-    <section class="border-t border-slate-800">
+    <section class="border-t border-slate-800 bg-white">
       <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
         <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
           <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
