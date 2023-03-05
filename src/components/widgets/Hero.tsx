@@ -41,11 +41,11 @@ export default component$(() => {
           </div>
         </div>
       </div>
-      <div class="absolute h-full w-full overflow-hidden">
+      <div class="absolute h-full w-full overflow-hidden top-0">
         <img
           src={heroImage} 
           class="h-full min-w-full max-w-none bg-blend-overlay object-fill top-0"
-          alt="Qwind Logo"
+          alt="Hero Image Bestattungsvorsorge"
           loading="eager"
         />
       </div>
