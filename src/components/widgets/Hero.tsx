@@ -20,9 +20,9 @@ export default component$(() => {
                   Jetzt vorsorgen für morgen
                 </p>
                 <div class="flex flex-nowrap flex-col sm:flex-row gap-4 m-auto md:m-0 justify-center md:justify-start">
-                  <div class="flex w-full justify-center">
+                  <div class="flex w-full justify-center md:justify-start">
                     <a
-                      class="text-white btn bg-third sm:mb-0 border-none hover:text-black"
+                      class="text-white bg-third hover:bg-fourth sm:mb-0 border-none text-center rounded-lg px-5 py-2.5"
                       href="https://github.com/onwidget/qwind"
                       target="_blank"
                       rel="noopener"
@@ -30,10 +30,11 @@ export default component$(() => {
                       <p class="text-white">Angebot anfragen</p>
                     </a>
                   </div>
-                  <div class="flex w-full justify-center">
-                    <button class="text-white sm:mb-0 bg-transparent border-2 border-white btn">
+                  <div class="flex w-full justify-center md:justify-start">
+                    <button class="text-white sm:mb-0 bg-transparent border-2 border-white hover:bg-fourth hover:border-fourth rounded-lg px-5 py-2.5">
                       <p class="text-white">Kontakt</p>
                     </button>
+
                   </div>
                 </div>
               </div>

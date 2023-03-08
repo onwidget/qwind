@@ -3,7 +3,9 @@
 # Pages
 
 - [Leistungen](/leistungen)
-- [Referenzen](/refernzen)
 - [Preise](/preise)
+- [Bestattungskosten](/bestattungskosten)
+- [Referenzen](/referenzen)
+- [Team](/team)
 
 ## [Blog](/blog)

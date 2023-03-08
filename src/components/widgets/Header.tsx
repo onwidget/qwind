@@ -48,12 +48,12 @@ export default component$(() => {
                     {item.href ? (
                       <a
                         href={item.href}
-                        class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                        class="font-medium hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
                       >
                         {item.text}
                       </a>
                     ) : (
-                      <button class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                      <button class="font-medium hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">
                         {item.text}
                       </button>
                     )}

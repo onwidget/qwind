@@ -1,10 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 
+import Logo from "~/components/atoms/Logo";
 import { IconTwitter } from "~/components/icons/IconTwitter";
 import { IconInstagram } from "~/components/icons/IconInstagram";
 import { IconFacebook } from "~/components/icons/IconFacebook";
-import { IconGithub } from "~/components/icons/IconGithub";
 
 export default component$(() => {
   const links = [
@@ -37,11 +37,6 @@ export default component$(() => {
     { label: "Twitter", icon: IconTwitter, href: "#" },
     { label: "Instagram", icon: IconInstagram, href: "#" },
     { label: "Facebook", icon: IconFacebook, href: "#" },
-    {
-      label: "Github",
-      icon: IconGithub,
-      href: "https://github.com/onwidget/qwind",
-    },
   ];
 
   return (
@@ -51,7 +46,7 @@ export default component$(() => {
           <div class="col-span-12 lg:col-span-4 pr-8">
             <div class="mb-2">
               <Link class="inline-block font-bold text-xl uppercase text-third" href={"/"}>
-                Wiener Verein
+                <Logo />
               </Link>
             </div>
             <div class="text-sm text-gray-400">
