@@ -4,7 +4,6 @@ export default component$(() => {
 
     return (
         <section class="relative pt-24 pb-36 bg-fourth overflow-hidden">
-        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2" src="flaro-assets/images/contact/gradient.svg" alt=""/>
         <div class="relative z-10 container px-4 mx-auto">
             <h2 class="text-white mb-5 text-6xl md:text-8xl xl:text-10xl text-center font-bold font-heading tracking-px-n leading-none">Kontakt</h2>
             <p class="mb-20 text-lg text-center text-gray-500 font-medium leading-normal md:max-w-lg mx-auto">Lorem ipsum dolor sit amet, to the con adipiscing. Volutpat tempor to the condimentum vitae vel purus.</p>
