@@ -36,11 +36,8 @@ export default component$(() => {
                         <div class="flex flex-col justify-between h-full">
                             <div class="mb-5 block">
                             <div class="flex flex-wrap mb-4 -m-2">
-                            <div class="p-2 w-16 overflow-hidden rounded-full">
-                                <img src="https://media.istockphoto.com/id/1167753373/vector/woman-avatar-isolated-on-white-background-vector-illustration-for-your-design.jpg?s=612x612&w=0&k=20&c=Y2a_YXRjZ3bXa3Jn2EStSXv7hJly0uEkdlWk4tdbI6U=" alt=""/>
-                            </div>
-                                <div class="w-auto p-2">
-                                <img src="flaro-assets/images/testimonials/avatar.png" alt=""/>
+                                <div class="p-2 w-16 overflow-hidden rounded-full">
+                                    <img src="https://media.istockphoto.com/id/1167753373/vector/woman-avatar-isolated-on-white-background-vector-illustration-for-your-design.jpg?s=612x612&w=0&k=20&c=Y2a_YXRjZ3bXa3Jn2EStSXv7hJly0uEkdlWk4tdbI6U=" alt=""/>
                                 </div>
                                 <div class="w-auto p-2">
                                 <h3 class="font-semibold leading-normal">{people.name}</h3>
