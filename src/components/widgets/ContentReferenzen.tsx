@@ -27,8 +27,6 @@ export default component$(() => {
 
     return (
         <section class="relative pt-24 pb-32 bg-white overflow-hidden">
-            <img class="absolute top-0 left-0" src="flaro-assets/images/testimonials/gradient.svg" alt=""/>
-            <img class="absolute bottom-0 right-0" src="flaro-assets/images/testimonials/gradient2.svg" alt=""/>
             <div class="relative z-10 container px-4 mx-auto">
                 <h2 class="mb-16 text-6xl md:text-7xl font-bold font-heading text-center tracking-px-n leading-tight">Was unsere Kunden über uns sagen</h2>
                 <div class="flex flex-wrap -m-3">
