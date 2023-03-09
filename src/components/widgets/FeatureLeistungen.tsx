@@ -53,9 +53,6 @@ export default component$(() => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                         </p>
                     </div>
-                </div>
-
-                <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
                     <div class="p-8 space-y-3 border-2 border-third rounded-xl">
                         <span class="inline-block text-third">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,9 +95,6 @@ export default component$(() => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                         </p>
                     </div>
-                </div>
-
-                <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
                     <div class="p-8 space-y-3 border-2 border-third rounded-xl">
                         <span class="inline-block text-third">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">

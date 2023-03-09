@@ -1,13 +1,17 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStore } from "@builder.io/qwik";
 
 
 export default component$(() => {
+    const popUpState = useStore({
+        value: false,
+        text: "",
+    });
+
     return (
     <section class="bg-fourth">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Unsere Pakete</h2>
-                <p class="mb-5 font-light sm:text-xl text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+                <h2 class="mb-4 text-6xl tracking-tight font-extrabold text-white">Unsere Pakete</h2>
             </div>
             <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 items-end">
                 <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border shadow border-gray-600 xl:p-8 ">
@@ -43,7 +47,7 @@ export default component$(() => {
                             <span>Bestattung nach individuellen Wünschen</span>
                         </li>
                     </ul>
-                    <a href="#" class="text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Paket anfragen</a>
+                    <a onClick$={() => {popUpState.value = true; popUpState.text = "Basis"}} class="text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Paket anfragen</a>
                 </div>
                 <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border shadow border-gray-600 xl:p-8">
                     <h3 class="mb-4 text-2xl font-semibold">Tradition</h3>
@@ -90,7 +94,7 @@ export default component$(() => {
                             <span>Abdeckung der Nebenkosten</span>
                         </li>
                     </ul>
-                    <a href="#" class="bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white  ">Paket anfragen</a>
+                    <a onClick$={() => {popUpState.value = true; popUpState.text = "Tradition"}}  class="bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white  ">Paket anfragen</a>
                 </div>
                 <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow  xl:p-8 ">
                     <h3 class="mb-4 text-2xl font-semibold">Prestige</h3>
@@ -145,10 +149,56 @@ export default component$(() => {
                             <span>Digitale Nachlass</span>
                         </li>
                     </ul>
-                    <a href="#" class="text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Paket anfragen</a>
+                    <a onClick$={() => {popUpState.value = true; popUpState.text = "Prestige"}} class="text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Paket anfragen</a>
                 </div>
             </div>
         </div>
-        </section>
+        {popUpState.value &&
+        <div class="absolute">
+            <qwik-fragment>
+            <div class="fixed z-50 inset-0 overflow-y-auto flex items-center justify-center">
+              <div class="fixed inset-0 transition-opacity" aria-hidden="true" onClick$={() => (popUpState.value = false)}>
+                <div class="absolute inset-0 bg-black opacity-75"></div>
+              </div>
+              <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="sm:flex sm:items-start">
+                  <div class="w-full sm:mx-auto">
+                    <div class="aspect-w-16 aspect-h-9">
+                    <div class=" px-4 mx-auto max-w-screen-md">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Anfragen</h2>
+                <form action="#" class="space-y-8">
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Deine E-Mail Adresse*</label>
+                                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 " placeholder="name@deinemail.com" required />
+                            </div>
+                            <div>
+                                <label for="tel" class="block mb-2 text-sm font-medium text-gray-900 ">Deine Telefon-Nummer</label>
+                                <input type="tel" id="tel" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 " placeholder="+43 676 / 95437382746" />
+                            </div>
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Paket</label>
+                                <p class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm">{popUpState.text}</p>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Zusatzinfos</label>
+                                <textarea id="message" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-third " placeholder="Du hast zusätzliche Fragen oder Infos ..."></textarea>
+                            </div>
+                            <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-third sm:w-fit hover:bg-fourth focus:ring-4 focus:outline-none focus:ring-third">Anfragen</button>
+                        </form>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <button onClick$={() => (popUpState.value = false)} type="button" class="absolute top-0 right-0 bg-fourth text-white w-8 h-8 rounded-full flex items-center justify-center mt-2 mr-2 focus:outline-none" aria-label="Close">
+                  <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </qwik-fragment>  
+        </div>
+        }
+    </section>
     )
 })

@@ -8,4 +8,3 @@
 - [Referenzen](/referenzen)
 - [Team](/team)
 
-## [Blog](/blog)

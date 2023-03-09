@@ -80,7 +80,7 @@ export default component$(() => {
 
           <div class="hidden items-center md:flex">
             <a
-              href="https://github.com/onwidget/qwind"
+              href="/kontakt"
               aria-label="Kontakt Page"
               class="ml-3 btn bg-third w-full h-10 px-5 shadow-none text-base border-none"
             >
