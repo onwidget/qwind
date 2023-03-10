@@ -45,7 +45,7 @@ export default component$(() => {
       <div class="absolute h-full w-full overflow-hidden top-0">
         <img
           src={heroImage} 
-          class="min-h-full min-w-full max-w-none bg-blend-overlay object-fill top-0"
+          class="relative left-0 h-full min-w-full max-w-none bg-blend-overlay object-fill bottom-0"
           alt="Hero Image Bestattungsvorsorge"
           loading="eager"
         />

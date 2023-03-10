@@ -24,7 +24,7 @@ export default component$(() => {
                 <div class="relative rounded-xl overflow-hidden">
                 <img class="w-full" src={backGroundImage} alt="placeholder image" />
                 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <button onClick$={() => (popUpState.value = true)} id="playButton" class="flex items-center justify-center bg-third rounded-full h-16 w-16 transition duration-500 ease-in-out transform hover:scale-110">
+                    <button aria-label="Open Video PopUp" onClick$={() => (popUpState.value = true)} id="playButton" class="flex items-center justify-center bg-third rounded-full h-16 w-16 transition duration-500 ease-in-out transform hover:scale-110">
                     <svg class="pl-1" width="30" height="24" fill="white" stroke="white" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M23 12l-22 12v-24l22 12zm-21 10.315l18.912-10.315-18.912-10.315v20.63z"/></svg>
                     </button>
                 </div>

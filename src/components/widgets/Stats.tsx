@@ -3,7 +3,7 @@ import { component$ } from "@builder.io/qwik";
 export default component$(() => {
   return (
     <section class="bg-white">
-        <div class="py-16 px-4 mx-auto text-center lg:pt-32 lg:px-12">
+        <div class="pt-16 px-4 mx-auto text-center lg:pt-32 lg:px-12">
             <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-third">Zahlen und Fakten</h2>
             <div class="px-4 py-8 md:py-16 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-20 max-w-6xl">
             <div class="grid grid-cols-1 row-gap-8 md:grid-cols-4">
