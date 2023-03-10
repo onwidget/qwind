@@ -2,13 +2,13 @@ import { component$ } from "@builder.io/qwik";
 
 export default component$(() => {
     return (
-        <section class="bg-white dark:bg-gray-900">
+        <section class="bg-white">
             <div class="container flex flex-col items-center px-4 py-12 mx-auto text-center">
-                <h2 class="text-2xl font-bold tracking-tight text-gray-800 xl:text-3xl dark:text-white">
+                <h2 class="text-2xl font-bold tracking-tight text-gray-800 xl:text-3xl">
                     Downloads
                 </h2>
 
-                <p class="block max-w-4xl mt-4 text-gray-500 dark:text-gray-300">
+                <p class="block max-w-4xl mt-4 text-gray-500">
                     Hier findest du weiter Infos per Download
                 </p>
 

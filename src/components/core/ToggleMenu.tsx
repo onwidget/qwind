@@ -1,13 +1,15 @@
-import { component$, useStore } from "@builder.io/qwik";
+import { PropFunction, QRL, component$, useStore } from "@builder.io/qwik";
 
 import { IconMenu } from "~/components/icons/IconMenu";
 
 interface ItemProps {
   iconClass?: string;
+  show$: PropFunction<() => boolean>;
 }
 
+
 export default component$((props: ItemProps) => {
-  const { iconClass } = props;
+  const iconClass = props.iconClass;
 
   const store = useStore({
     isExpanded: false,
@@ -22,6 +24,7 @@ export default component$((props: ItemProps) => {
       aria-label="Toggle Menu"
       onClick$={() => {
         store.isExpanded = store.isExpanded ? false : true;
+        props.show$();
 
         // TODO:
         document.body.classList.toggle("overflow-hidden");

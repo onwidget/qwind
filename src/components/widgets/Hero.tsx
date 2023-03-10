@@ -6,9 +6,9 @@ import heroImage from "~/assets/images/heroImage.jpg";
 export default component$(() => {
   return (
     <section
-      class={`bg-gradient-to-b flex items-center justify-start h-screen overflow-hidden `}
+      class={`bg-gradient-to-b flex items-center justify-start h-[90vh] relative overflow-hidden `}
     >
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex h-screen 2xl:h-auto pt-[72px] w-full items-center justify-center md:justify-start z-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex h-[80vh] 2xl:h-auto pt-[72px] w-full items-center justify-center md:justify-start z-10">
         <div class="py-12 md:py-12 lg:py-16 block md:flex text-center md:text-left">
           <div class="pb-12 md:pb-0 md:py-0 mx-auto md:pr-16 flex items-center basis-3/5">
             <div>
@@ -45,12 +45,12 @@ export default component$(() => {
       <div class="absolute h-full w-full overflow-hidden top-0">
         <img
           src={heroImage} 
-          class="h-full min-w-full max-w-none bg-blend-overlay object-fill top-0"
+          class="min-h-full min-w-full max-w-none bg-blend-overlay object-fill top-0"
           alt="Hero Image Bestattungsvorsorge"
           loading="eager"
         />
       </div>
-      <div class="absolute z-100 bottom-0 left-0 w-screen overflow-hidden">
+      <div class="absolute z-100 bottom-0 right-0 w-[102vw] overflow-hidden">
          <SpacerHeader />
       </div>
     </section>

@@ -2,11 +2,11 @@ import { component$ } from "@builder.io/qwik";
 
 export default component$(() => {
     return (
-        <section class="bg-white dark:bg-gray-900">
+        <section class="bg-white">
             <div class="container px-6 py-10 mx-auto max-w-screen-xl">
-                <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Unsere Alleinstellungs-<br/><span class="underline decoration-third">Merkmale</span></h1>
+                <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl">Unsere Alleinstellungs-<br/><span class="underline decoration-third">Merkmale</span></h1>
 
-                <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+                <p class="mt-4 text-gray-500 xl:mt-6 ">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
                 </p>
 
@@ -19,9 +19,9 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Sofortschutz – keine Gesundheitsfragen</h1>
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Sofortschutz – keine Gesundheitsfragen</h1>
 
-                        <p class="text-gray-500 dark:text-gray-300">
+                        <p class="text-gray-500 ">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                         </p>
                     </div>
@@ -33,9 +33,9 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Lebenslanger Schutz</h1>
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Lebenslanger Schutz</h1>
 
-                        <p class="text-gray-500 dark:text-gray-300">
+                        <p class="text-gray-500 ">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                         </p>
                     </div>
@@ -47,9 +47,9 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Zusatz-Absicherung</h1>
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Zusatz-Absicherung</h1>
 
-                        <p class="text-gray-500 dark:text-gray-300">
+                        <p class="text-gray-500 ">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                         </p>
                     </div>
@@ -61,9 +61,9 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Im Ernstfall – Direktverrechnung</h1>
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Im Ernstfall – Direktverrechnung</h1>
 
-                        <p class="text-gray-500 dark:text-gray-300">
+                        <p class="text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                         </p>
                     </div>
@@ -75,9 +75,9 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Ausrichtung der Bestattung nach persönlichen Wünschen</h1>
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Ausrichtung der Bestattung nach persönlichen Wünschen</h1>
 
-                        <p class="text-gray-500 dark:text-gray-300">
+                        <p class="text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                         </p>
                     </div>
@@ -89,9 +89,9 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Weltweites Überführungsservice</h1>
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Weltweites Überführungsservice</h1>
 
-                        <p class="text-gray-500 dark:text-gray-300">
+                        <p class="text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                         </p>
                     </div>
@@ -103,9 +103,9 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Soforthilfe – wir kümmern uns um Sie</h1>
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Soforthilfe – wir kümmern uns um Sie</h1>
 
-                        <p class="text-gray-500 dark:text-gray-300">
+                        <p class="text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                         </p>
                     </div>
@@ -117,9 +117,9 @@ export default component$(() => {
                             </svg>
                         </span>
 
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Hilfe in der Organisation</h1>
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize ">Hilfe in der Organisation</h1>
 
-                        <p class="text-gray-500 dark:text-gray-300">
+                        <p class="text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                         </p>
                     </div>

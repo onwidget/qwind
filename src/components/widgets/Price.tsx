@@ -160,11 +160,11 @@ export default component$(() => {
               <div class="fixed inset-0 transition-opacity" aria-hidden="true" onClick$={() => (popUpState.value = false)}>
                 <div class="absolute inset-0 bg-black opacity-75"></div>
               </div>
-              <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+              <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
                 <div class="sm:flex sm:items-start">
                   <div class="w-full sm:mx-auto">
                     <div class="aspect-w-16 aspect-h-9">
-                    <div class=" px-4 mx-auto max-w-screen-md">
+                    <div class=" px-4 mx-auto w-full sm:max-w-screen-md">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Anfragen</h2>
                 <form action="#" class="space-y-8">
                             <div>
@@ -173,7 +173,7 @@ export default component$(() => {
                             </div>
                             <div>
                                 <label for="tel" class="block mb-2 text-sm font-medium text-gray-900 ">Deine Telefon-Nummer</label>
-                                <input type="tel" id="tel" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 " placeholder="+43 676 / 95437382746" />
+                                <input type="" id="tel" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-third block w-full p-2.5 " placeholder="+43 676 / 95437382746" />
                             </div>
                             <div>
                                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Paket</label>
