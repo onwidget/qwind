@@ -1,4 +1,4 @@
-import { PropFunction, QRL, component$, useStore } from "@builder.io/qwik";
+import { PropFunction, component$, useStore } from "@builder.io/qwik";
 
 import { IconMenu } from "~/components/icons/IconMenu";
 
