@@ -1,29 +1,44 @@
 import { component$, Resource } from "@builder.io/qwik";
-import { useEndpoint } from "@builder.io/qwik-city";
-import type {
-  DocumentHead,
-  StaticGenerateHandler,
-  RequestHandler,
-} from "@builder.io/qwik-city";
+import { routeLoader$ } from "@builder.io/qwik-city";
+
+import type { DocumentHead, StaticGenerateHandler } from "@builder.io/qwik-city";
+import type { Post } from "~/types";
 
 import md from "markdown-it";
 
 import { fetchPosts, findPostBySlug } from "~/utils/posts";
 
+export const useGetPostBySlug = routeLoader$(async ({ params, status }): Promise<Post> => {
+  const post = await findPostBySlug(params.slug);
+
+  if (!post) {
+    status(404);
+  }
+
+  return post as Post;
+});
+
 export default component$(() => {
-  const data = useEndpoint<typeof onGet>();
+  const data = useGetPostBySlug();
 
   return (
     <Resource
       value={data}
       onPending={() => <div>Loading...</div>}
       onRejected={() => <div>Error</div>}
-      onResolved={(post: any) => (
+      onResolved={(post: Post) => (
         <section class="mx-auto py-8 sm:py-16 lg:py-20">
           <article>
             <header class={post?.image ? "text-center" : ""}>
               <p class="mx-auto max-w-3xl px-4 sm:px-6">
-                <time dateTime={post.publishDate}>{post.publishDate}</time>
+                <time dateTime={String(post.publishDate.getTime())}>
+                  {post.publishDate.toLocaleDateString("en-us", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                    timeZone: "UTC",
+                  })}
+                </time>
                 {/* ~{" "} {Math.ceil(post.readingTime)} min read */}
               </p>
               <h1 class="leading-tighter font-heading mx-auto mb-8 max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl">
@@ -34,7 +49,7 @@ export default component$(() => {
                   src={post.image}
                   class="mx-auto mt-4 mb-6 max-w-full bg-gray-400 dark:bg-slate-700 sm:rounded-md lg:max-w-6xl"
                   sizes="(max-width: 900px) 400px, 900px"
-                  alt={post.description}
+                  alt={post.excerpt}
                   loading="eager"
                   width={900}
                   height={480}
@@ -58,29 +73,24 @@ export default component$(() => {
   );
 });
 
-export const onGet: RequestHandler<any> = async ({ params, response }) => {
-  const post = await findPostBySlug(params.slug);
-
-  if (!post) {
-    throw response.error(404);
-  }
-  return post;
-};
-
 export const onStaticGenerate: StaticGenerateHandler = async () => {
-  const posts: any = await fetchPosts();
+  const posts = await fetchPosts();
 
   return {
-    params: posts.map(({ slug }: any) => ({ slug })),
+    params: posts.map(({ slug }) => ({ slug })),
   };
 };
 
-export const head: DocumentHead = ({ data }: any) => ({
-  title: `${data.title} — Qwind`,
-  meta: [
-    {
-      name: "description",
-      content: data.description,
-    },
-  ],
-});
+export const head: DocumentHead = ({ resolveValue }) => {
+  const post = resolveValue(useGetPostBySlug);
+
+  return {
+    title: `${post.title} — Qwind`,
+    meta: [
+      {
+        name: "description",
+        content: post?.excerpt,
+      },
+    ],
+  };
+};

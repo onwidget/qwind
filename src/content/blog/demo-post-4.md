@@ -1,7 +1,6 @@
 ---
-publishDate: Nov 02 2022
+publishDate: 2023-02-04T00:00:00Z
 title: Aliquip et adipisicing sit sit fugiat commodo
-description: Lorem ipsum dolor sit amet
 excerpt: Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat
 image: /images/placeholder-1024x640.png
 tags:

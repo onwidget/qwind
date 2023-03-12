@@ -2,18 +2,19 @@ import { component$, useStore, useTask$ } from "@builder.io/qwik";
 import { isServer } from "@builder.io/qwik/build";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
+import type { Post } from "~/types";
 import { fetchPosts } from "~/utils/posts";
 import { SITE } from "~/config.mjs";
 
 export default component$(() => {
-  const store = useStore({
+  const store = useStore<{ posts: Post[] }>({
     posts: [],
   });
 
   useTask$(async () => {
     if (isServer) {
       const posts = await fetchPosts();
-      store.posts = posts.map((post: any) => ({ ...post }));
+      store.posts = posts.map((post: Post) => ({ ...post }));
     }
   });
 
@@ -27,11 +28,7 @@ export default component$(() => {
       <ul>
         {store.posts.map((post: any) => (
           <li class="mb-10 md:mb-16">
-            <article
-              class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${
-                post.image ? "md:grid-cols-2" : ""
-              }`}
-            >
+            <article class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${post.image ? "md:grid-cols-2" : ""}`}>
               {post.image && (
                 <a class="relative block group" href={`/blog/${post.slug}`}>
                   <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-80 lg:pb-[56.25%] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg">
@@ -57,14 +54,17 @@ export default component$(() => {
                     </a>
                   </h2>
                 </header>
-                <p class="text-md sm:text-lg flex-grow">
-                  {post.excerpt || post.description}
-                </p>
+                <p class="text-md sm:text-lg flex-grow">{post.excerpt || post.description}</p>
                 <footer class="mt-4">
                   <div>
                     <span class="text-gray-500 dark:text-slate-400">
-                      <time dateTime={post.publishDate}>
-                        {post.publishDate}
+                      <time dateTime={String(post.publishDate.getTime())}>
+                        {post.publishDate.toLocaleDateString("en-us", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                          timeZone: "UTC",
+                        })}
                       </time>
                       {/* ~{' '}{Math.ceil(post.readingTime)} min read */}
                     </span>
