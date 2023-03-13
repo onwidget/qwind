@@ -38,7 +38,7 @@ export default component$(() => {
     <section class="scroll-mt-16 bg-fourth" id="features">
       <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
         <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
-          <p class="text-base text-white font-semibold tracking-wide uppercase">
+          <p class="text-base text-white font-bold tracking-wide uppercase">
             Gründe
           </p>
           <h2 class="text-4xl md:text-5xl text-third font-bold leading-tighter tracking-tighter mb-4 font-heading">

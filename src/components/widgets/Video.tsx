@@ -16,7 +16,7 @@ export default component$(() => {
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">WIENER VEREIN</h2>
                 <p class="mb-6 font-light text-gray-500 md:text-lg">Ein Todesfall in der Familie stellt eine absolute Ausnahmesituation dar. Emotional – und in vielen Fällen auch finanziell! Ein Mensch verabschiedet sich endgültig und unwiderruflich. Und zurück bleibt Trauer und Ratlosigkeit.
                     In dieser Situation ist es gut zu wissen, wohin man sich wenden kann. Der WIENER VEREIN hilft, rasch und unbürokratisch – durch einfühlsame Beratung, operatives Handeln und die sofortige Bereitstellung finanzieller Mittel.</p>
-                <a href="#" class="inline-flex items-center text-white bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-4">
+                <a href="#" class="inline-flex items-center text-white font-bold bg-third hover:bg-fourth focus:ring-4 focus:ring-primary-300 rounded-lg text-xl px-5 py-2.5 text-center mb-4">
                     Jetzt anfragen
                     <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </a>
