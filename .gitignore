@@ -39,3 +39,5 @@ lerna-debug.log*
 
 package-lock.json
 .jampack
+
+tmp
