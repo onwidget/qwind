@@ -27,7 +27,7 @@ export default component$(() => {
       </header>
       <ul>
         {store.posts.map((post: any) => (
-          <li class="mb-10 md:mb-16">
+          <li key={post.slug} class="mb-10 md:mb-16">
             <article class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${post.image ? "md:grid-cols-2" : ""}`}>
               {post.image && (
                 <a class="relative block group" href={`/blog/${post.slug}`}>
