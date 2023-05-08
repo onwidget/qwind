@@ -55,16 +55,16 @@ export default component$(() => {
         </div>
         <div class="max-w-screen-xl sm:mx-auto">
           <div class="grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-x-16 md:grid-cols-2">
-            {items.map((subitems) => (
-              <div class="space-y-8">
-                {subitems.map(({ question, answer }) => (
-                  <div>
+            {items.map((subitems, index) => (
+              <div key={index} class="space-y-8">
+                {subitems.map(({ question, answer }, index2) => (
+                  <div key={index2}>
                     <h3 class="mb-4 text-xl font-bold">
                       <IconArrowDownRight class="w-7 h-7 text-secondary-500 inline-block" />
                       {question}
                     </h3>
-                    {answer.split("\n\n").map((paragraph) => (
-                      <p class="text-gray-700 dark:text-gray-400 mb-2">
+                    {answer.split("\n\n").map((paragraph, index3) => (
+                      <p key={index3} class="text-gray-700 dark:text-gray-400 mb-2">
                         {paragraph}
                       </p>
                     ))}

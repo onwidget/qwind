@@ -61,10 +61,10 @@ export default component$(() => {
           </p>
         </div>
         <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
-          {items.map((subitems) => (
-            <div class="space-y-8 sm:px-8">
-              {subitems.map(({ title, description }) => (
-                <div class="flex flex-row max-w-md">
+          {items.map((subitems, index) => (
+            <div key={index} class="space-y-8 sm:px-8">
+              {subitems.map(({ title, description }, index2) => (
+                <div key={index2} class="flex flex-row max-w-md">
                   <div class="mb-4 mr-4">
                     <div class="text-white flex items-center justify-center w-12 h-12 rounded-full bg-secondary-500 dark:bg-secondary-700">
                       <IconStar />

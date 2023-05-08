@@ -6,7 +6,7 @@ const coverImage = "https://images.unsplash.com/photo-1590767950092-42b8362368da
 export default component$(() => {
   return (
     <section class={`bg-gradient-to-b md:bg-gradient-to-r from-white via-purple-50 to-sky-100 dark:bg-none mt-[-72px]`}>
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:flex md:h-screen 2xl:h-auto pt-[72px]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 md:flex md:h-screen 2xl:h-auto pt-[72px]">
         <div class="py-12 md:py-12 lg:py-16 block md:flex text-center md:text-left">
           <div class="pb-12 md:pb-0 md:py-0 mx-auto md:pr-16 flex items-center basis-3/5">
             <div>
@@ -50,8 +50,8 @@ export default component$(() => {
               <Image
                 src={coverImage}
                 layout="constrained"
-                width={1000}
-                height={1250}
+                width={493}
+                height={616}
                 alt="Qwind Hero Image (Cool dog)"
                 class="mx-auto w-full rounded-md md:h-full drop-shadow-2xl bg-gray-400 dark:bg-slate-700"
                 background="auto"
