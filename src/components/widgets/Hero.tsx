@@ -54,7 +54,7 @@ export default component$(() => {
                 height={616}
                 alt="Qwind Hero Image (Cool dog)"
                 class="mx-auto w-full rounded-md md:h-full drop-shadow-2xl bg-gray-400 dark:bg-slate-700"
-                background="auto"
+                breakpoints={[320, 480, 640, 1024]}
               />
             </div>
           </div>

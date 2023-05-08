@@ -1,7 +1,7 @@
 {
   "name": "qwind",
   "description": "A template to make your website using Qwik + Tailwind CSS.",
-  "version": "0.105.0",
+  "version": "0.106.0",
   "private": true,
   "scripts": {
     "build": "qwik build && jampack ./dist",
