@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import { qwikVite } from '@builder.io/qwik/optimizer';
 import { qwikCity } from '@builder.io/qwik-city/vite';
-import { imagetools } from 'vite-imagetools';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 import { SITE } from './src/config.mjs';
@@ -17,7 +16,6 @@ export default defineConfig(() => {
             }),
             qwikVite(),
             tsconfigPaths(),
-            imagetools(),
         ],
         preview: {
             headers: {
