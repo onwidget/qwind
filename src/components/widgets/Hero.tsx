@@ -6,9 +6,9 @@ const coverImage = "https://images.unsplash.com/photo-1590767950092-42b8362368da
 export default component$(() => {
   return (
     <section class={`bg-gradient-to-b md:bg-gradient-to-r from-white via-purple-50 to-sky-100 dark:bg-none mt-[-72px]`}>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 md:flex md:h-screen 2xl:h-auto pt-[72px]">
-        <div class="py-12 md:py-12 lg:py-16 block md:flex text-center md:text-left">
-          <div class="pb-12 md:pb-0 md:py-0 mx-auto md:pr-16 flex items-center basis-3/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:flex lg:h-screen 2xl:h-auto pt-[72px]">
+        <div class="py-12 md:py-20 2xl:min-h-0 lg:flex lg:gap-8 lg:items-center lg:py-16">
+          <div class="mx-auto text-center basis-1/2 lg:text-left md:pb-16 pb-12 lg:pb-0">
             <div>
               <h1 class="text-5xl md:text-[3.48rem] font-bold leading-tighter tracking-tighter mb-4 font-heading px-4 md:px-0">
                 Free template for <br class="hidden lg:block" />{" "}
@@ -27,7 +27,7 @@ export default component$(() => {
                     Dark Mode, Great Page Speed, image optimization, sitemap generation and more.
                   </span>
                 </p>
-                <div class="max-w-xs sm:max-w-md flex flex-nowrap flex-col sm:flex-row gap-4 m-auto md:m-0 justify-center md:justify-start">
+                <div class="flex flex-col flex-nowrap gap-4 m-auto max-w-xs sm:flex-row sm:justify-center sm:max-w-md lg:justify-start lg:m-0 lg:max-w-7xl">
                   <div class="flex w-full sm:w-auto">
                     <a
                       class="btn btn-primary sm:mb-0 w-full"
@@ -45,15 +45,15 @@ export default component$(() => {
               </div>
             </div>
           </div>
-          <div class="block md:flex items-center flex-1">
-            <div class="relative m-auto max-w-4xl">
+          <div class="basis-1/2">
+            <div class="relative m-auto max-w-5xl">
               <Image
                 src={coverImage}
                 layout="constrained"
                 width={493}
                 height={616}
                 alt="Qwind Hero Image (Cool dog)"
-                class="mx-auto w-full rounded-md md:h-full drop-shadow-2xl bg-gray-400 dark:bg-slate-700"
+                class="mx-auto lg:mr-0 w-full drop-shadow-2xl rounded-md"
                 breakpoints={[320, 480, 640, 1024]}
               />
             </div>
