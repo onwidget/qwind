@@ -5,8 +5,8 @@ import {
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
 
-import { RouterHead } from "~/components/core/RouterHead";
-import { DarkThemeLauncher } from "~/components/core/DarkThemeLauncher";
+import { RouterHead } from "~/components/common/RouterHead";
+import { DarkThemeLauncher } from "~/components/common/DarkThemeLauncher";
 
 import globalStyles from "~/assets/styles/global.css?inline";
 
