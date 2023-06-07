@@ -112,7 +112,7 @@ export default component$(() => {
                   title={label}
                   href={href}
                 >
-                  {Icon && <Icon />}
+                  {Icon && <Icon class="h-5 w-5" />}
                 </Link>
               </li>
             ))}
