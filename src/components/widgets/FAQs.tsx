@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { TbArrowDownRight as IconArrowDownRight } from "@qwikest/icons/tablericons";
+import { IconArrowDownRight } from "~/components/icons/IconArrowDownRight"
 
 export default component$(() => {
   const items = [

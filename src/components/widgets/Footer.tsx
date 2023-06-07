@@ -1,12 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 
-import {
-  TbBrandTwitter as IconTwitter,
-  TbBrandInstagram as IconInstagram,
-  TbBrandFacebook as IconFacebook,
-  TbBrandGithub as IconGithub,
-} from "@qwikest/icons/tablericons";
+import { IconTwitter } from "~/components/icons/IconTwitter"
+import { IconInstagram } from "~/components/icons/IconInstagram"
+import { IconFacebook } from "~/components/icons/IconFacebook"
+import { IconGithub } from "~/components/icons/IconGithub"
 
 export default component$(() => {
   const links = [
@@ -112,7 +110,7 @@ export default component$(() => {
                   title={label}
                   href={href}
                 >
-                  {Icon && <Icon class="h-5 w-5" />}
+                  {Icon && <Icon />}
                 </Link>
               </li>
             ))}

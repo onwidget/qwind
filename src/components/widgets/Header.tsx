@@ -30,7 +30,7 @@ export default component$(() => {
     >
       <div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-7xl md:px-4">
         <div class="flex justify-between">
-          <a class="flex items-center" href={"/"}>
+          <a class="flex items-center py-2.5" href={"/"}>
             <Logo />
           </a>
           <div class="flex items-center md:hidden">
@@ -38,7 +38,7 @@ export default component$(() => {
             <ToggleMenu iconClass="w-6 h-6" />
           </div>
         </div>
-        <div class="md:self-center flex items-center mb-4 md:mb-0 ml-4">
+        <div class="md:self-center flex items-center md:mb-0 ml-4">
           <nav
             class="items-center w-full md:w-auto hidden md:flex text-gray-500 dark:text-slate-200 h-[calc(100vh-100px)] md:h-auto overflow-y-auto md:overflow-visible pr-4"
             aria-label="Main navigation"

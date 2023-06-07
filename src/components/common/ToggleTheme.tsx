@@ -1,5 +1,6 @@
 import { component$, useStore, useVisibleTask$ } from "@builder.io/qwik";
-import { TbSun as IconSun, TbMoon as IconMoon } from "@qwikest/icons/tablericons";
+import { IconSun } from "~/components/icons/IconSun"
+import { IconMoon } from "~/components/icons/IconMoon"
 
 interface ItemProps {
   iconClass?: string;
