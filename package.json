@@ -25,6 +25,7 @@
     "@builder.io/qwik": "1.1.5",
     "@builder.io/qwik-city": "1.1.5",
     "@fontsource/inter": "^4.5.15",
+    "@qwikest/icons": "^0.0.8",
     "@unpic/qwik": "^0.0.19",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
