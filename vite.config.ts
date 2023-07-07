@@ -5,8 +5,6 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 import { SITE } from './src/config.mjs';
 
-const path = require('path');
-
 export default defineConfig(() => {
     return {
         base: SITE.basePathname,
@@ -21,11 +19,6 @@ export default defineConfig(() => {
             headers: {
                 'Cache-Control': 'public, max-age=600',
             },
-        },
-        resolve: {
-            alias: {
-                '~': path.resolve(__dirname, './src'),
-            },
-        },
+        }
     };
 });
