@@ -26,7 +26,8 @@
     "@unpic/qwik": "^0.0.23",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
-    "node-fetch": "3.3.1"
+    "node-fetch": "3.3.1",
+    "tailwind-merge": "^1.13.2"
   },
   "devDependencies": {
     "@divriots/jampack": "^0.13.0",
