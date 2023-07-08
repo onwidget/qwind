@@ -1,7 +1,7 @@
-export const IconTwitter = () => (
+export default () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="icon icon-tabler icon-tabler-brand-twitter w-5 h-5"
+    class="icon icon-tabler w-5 h-5"
     width="24"
     height="24"
     viewBox="0 0 24 24"

@@ -11,15 +11,16 @@ export default (props: ItemProps) => {
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      stroke-width="2"
+      stroke-width="1.5"
       stroke="currentColor"
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <circle cx="12" cy="12" r="4"></circle>
-      <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3-5a9 9 0 0 0 6-8a3 3 0 0 0-3-3a9 9 0 0 0-8 6a6 6 0 0 0-5 3" />
+        <path d="M7 14a6 6 0 0 0-3 6a6 6 0 0 0 6-3m4-8a1 1 0 1 0 2 0a1 1 0 1 0-2 0" />
+      </g>
     </svg>
   );
 };

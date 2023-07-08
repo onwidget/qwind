@@ -2,12 +2,12 @@ interface ItemProps {
   class?: string;
 }
 
-export const IconArrowDownRight = (props: ItemProps) => {
+export default (props: ItemProps) => {
   const { class: className } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class={`icon icon-tabler icon-tabler-arrow-down-right ${
+      class={`icon icon-tabler ${
         className || "w-5 h-5"
       }`}
       width="24"
