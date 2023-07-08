@@ -38,6 +38,8 @@ export default component$(() => {
                         class="absolute inset-0 object-cover w-full h-full mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
                         sizes="(max-width: 900px) 400px, 900px"
                         alt={post.title}
+                        width={900}
+                        height={400}
                       />
                     )}
                   </div>
