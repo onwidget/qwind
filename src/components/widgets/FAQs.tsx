@@ -1,78 +1,67 @@
 import { component$ } from "@builder.io/qwik";
-import { IconArrowDownRight } from "~/components/icons/IconArrowDownRight"
+import { twMerge } from "tailwind-merge";
+import { Headline } from "~/components/ui/Headline";
+import { ItemGrid } from "~/components/ui/ItemGrid";
+import IconArrowDownRight from "~/components/icons/IconArrowDownRight"
 
-export default component$(() => {
-  const items = [
-    [
-      {
-        question: "What do I need to start?",
-        answer: `Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.
+interface Item {
+  title?: string;
+  description?: string;
+  icon?: any;
+  classes?: Record<string, string>;
+}
 
-    Many say exploration is part of our destiny, but it’s actually our duty to future generations.`,
-      },
-      {
-        question: "How to install the Qwik + Tailwind CSS template?",
-        answer: `Well, the way they make shows is, they make one show. That show's called a pilot.
+interface Props {
+  id?: string;
+  title?: any;
+  subtitle?: any;
+  highlight?: any;
+  items: Array<Item>;
+  isDark?: boolean;
+  classes?: any;
+}
 
-    Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.`,
-      },
-      {
-        question: "What's something that you completely don't understand?",
-        answer: `A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.`,
-      },
-    ],
-    [
-      {
-        question: "What's an example of when you changed your mind?",
-        answer: `Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.`,
-      },
-      {
-        question: "What is something that you would really like to try again?",
-        answer: `A business big enough that it could be listed on the NASDAQ goes belly up. Disappears!
+export default component$((props: Props) => {
 
-      It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.`,
-      },
-      {
-        question:
-          "If you could only ask one question to each person you meet, what would that question be?",
-        answer: `This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.`,
-      },
-    ],
-  ];
+  const {
+    id,
+    title = null,
+    subtitle = null,
+    highlight = null,
+    items = [],
+    isDark = false,
+    classes = {},
+  } = props;
 
   return (
-    <section class="border-t border-gray-200 dark:border-slate-800">
-      <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
-        <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-          <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <p class="text-base text-primary-600 dark:text-purple-200 font-semibold tracking-wide uppercase">
-              FAQs
-            </p>
-            <h2 class="max-w-lg mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">
-              Frequently Asked Questions
-            </h2>
-          </div>
-        </div>
-        <div class="max-w-screen-xl sm:mx-auto">
-          <div class="grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-x-16 md:grid-cols-2">
-            {items.map((subitems, index) => (
-              <div key={index} class="space-y-8">
-                {subitems.map(({ question, answer }, index2) => (
-                  <div key={index2}>
-                    <h3 class="mb-4 text-xl font-bold">
-                      <IconArrowDownRight class="w-7 h-7 text-secondary-500 inline-block" />
-                      {question}
-                    </h3>
-                    {answer.split("\n\n").map((paragraph, index3) => (
-                      <p key={index3} class="text-gray-700 dark:text-gray-400 mb-2">
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
+    <section class="relative" {...(id ? { id } : {})}>
+      <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
+        <slot name="bg">
+          <div class={twMerge("absolute inset-0", isDark ? "bg-dark dark:bg-transparent" : "")}></div>
+        </slot>
+      </div>
+      <div
+        class={twMerge("relative text-default px-4 md:px-6 py-12 md:py-16 lg:py-20 mx-auto max-w-6xl", isDark ? "dark" : "")}
+      >
+        <Headline
+          title={title}
+          subtitle={subtitle}
+          highlight={highlight}
+          classes={{
+            container: "max-w-xl sm:mx-auto lg:max-w-2xl",
+            title: "sm:text-4xl text-3xl",
+            ...(classes?.headline ?? {}),
+          }}
+        />
+        <div class="sm:mx-auto">
+          <ItemGrid
+            items={items}
+            defaultIcon={IconArrowDownRight}
+            classes={{
+              panel: "max-w-none",
+              ...(classes?.items ?? {}),
+            }}
+          />
         </div>
       </div>
     </section>

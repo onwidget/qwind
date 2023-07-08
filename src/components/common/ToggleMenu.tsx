@@ -1,5 +1,5 @@
 import { component$, useStore } from "@builder.io/qwik";
-import { IconMenu } from "~/components/icons/IconMenu"
+import IconMenu from "~/components/icons/IconMenu"
 
 interface ItemProps {
   iconClass?: string;
