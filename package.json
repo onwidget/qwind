@@ -1,7 +1,7 @@
 {
   "name": "qwind",
   "description": "A template to make your website using Qwik + Tailwind CSS.",
-  "version": "0.110.0",
+  "version": "0.111.0",
   "private": true,
   "scripts": {
     "build": "qwik build && jampack ./dist",
@@ -20,31 +20,31 @@
     "qwik": "qwik"
   },
   "dependencies": {
-    "@builder.io/qwik": "1.2.6",
-    "@builder.io/qwik-city": "1.2.6",
-    "@fontsource-variable/inter": "^5.0.4",
-    "@unpic/qwik": "^0.0.23",
+    "@builder.io/qwik": "1.2.7",
+    "@builder.io/qwik-city": "1.2.7",
+    "@fontsource-variable/inter": "^5.0.8",
+    "@unpic/qwik": "^0.0.25",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
-    "node-fetch": "3.3.1",
-    "tailwind-merge": "^1.13.2"
+    "node-fetch": "3.3.2",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@divriots/jampack": "^0.13.0",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/eslint": "8.40.2",
-    "@types/markdown-it": "^12.2.3",
+    "@types/eslint": "8.44.2",
+    "@types/markdown-it": "^13.0.0",
     "@types/node": "latest",
-    "@typescript-eslint/eslint-plugin": "5.61.0",
-    "@typescript-eslint/parser": "5.61.0",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.44.0",
-    "eslint-plugin-qwik": "1.2.6",
-    "postcss": "^8.4.25",
-    "prettier": "3.0.0",
-    "tailwindcss": "^3.3.2",
+    "@typescript-eslint/eslint-plugin": "6.4.0",
+    "@typescript-eslint/parser": "6.4.0",
+    "autoprefixer": "10.4.15",
+    "eslint": "8.45.0",
+    "eslint-plugin-qwik": "1.2.7",
+    "postcss": "^8.4.27",
+    "prettier": "3.0.1",
+    "tailwindcss": "^3.3.3",
     "typescript": "5.1.6",
-    "vite": "4.4.1",
+    "vite": "4.4.9",
     "vite-tsconfig-paths": "4.2.0"
   },
   "engines": {
