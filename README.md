@@ -71,19 +71,20 @@ Inside **Qwind** template, you'll see the following folders and files:
 │   │   ├── core/
 │   │   ├── icons/
 |   |   └── widgets/
-|   |       ├── Header.astro
-|   |       ├── Footer.astro
+|   |       ├── Hero.tsx
+|   |       ├── Features.tsx
 |   |       └── ...
 │   ├── content/
-│   |   ├── blog/
-│   |   |   ├── post-slug-1.md
-│   |   |   ├── post-slug-2.md
-│   |   |   └── ...
+│   |   └── blog/
+│   |       ├── post-slug-1.md
+│   |       ├── post-slug-2.md
+│   |       └── ...
 │   ├── routes/
 │   |   ├── blog/
-│   |   ├── index.astro
+│   |   ├── index.tsx
 |   |   ├── layout.tsx
-|   |   └-- service-worker.ts
+|   |   ├-- service-worker.ts
+│   |   └-- ...
 │   ├── config.mjs
 │   ├── entry.dev.tsx
 │   ├── entry.preview.tsx
