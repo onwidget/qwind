@@ -8,7 +8,7 @@ import {
 import { RouterHead } from "~/components/common/RouterHead";
 import { DarkThemeLauncher } from "~/components/common/DarkThemeLauncher";
 
-import "@fontsource-variable/inter";
+// import "@fontsource-variable/inter";
 import globalStyles from "~/assets/styles/global.css?inline";
 
 export default component$(() => {
