@@ -36,6 +36,7 @@ export default component$(() => {
             <Logo />
           </a>
           <div class="flex items-center md:hidden">
+            <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
             <ToggleMenu />
           </div>
         </div>
@@ -45,16 +46,16 @@ export default component$(() => {
         >
           {menu && menu.items ? (
             <ul class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium">
-              {menu.items.map(({ text, href, items }) => (
-                <li class={items?.length ? "dropdown" : ""}>
+              {menu.items.map(({ text, href, items }, key) => (
+                <li key={key} class={items?.length ? "dropdown" : ""}>
                   {items?.length ? (
                     <>
                       <button class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center">
                         {text} <IconChevronDown class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                       </button>
                       <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-slate-800 rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
-                        {items.map(({ text: text2, href: href2 }) => (
-                          <li>
+                        {items.map(({ text: text2, href: href2 }, key2) => (
+                          <li key={key2}>
                             <a
                               class="first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap"
                               href={href2}
