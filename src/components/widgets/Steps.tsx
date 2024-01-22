@@ -60,7 +60,6 @@ export default component$(() => {
                       </div>
                     ) : (
                       <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-900 bg-primary-900">
-                        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
                         {typeof Icon !== "undefined" ? (
                           <Icon class="h-6 w-6 text-white dark:text-slate-200" />
                         ) : (
