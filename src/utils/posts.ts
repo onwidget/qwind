@@ -39,6 +39,7 @@ let _posts: Post[];
 
 /** */
 export const fetchPosts = async (): Promise<Post[]> => {
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   _posts = _posts || load();
 
   return await _posts;
@@ -50,7 +51,7 @@ export const findLatestPosts = async ({ count, page }: { count?: number; page?: 
   const _page = page || 1;
   const posts = await fetchPosts();
 
-  return posts ? posts.slice((_page - 1) * _count, (_page - 1) * _count + _count) : [];
+  return Array.isArray(posts) ? posts.slice((_page - 1) * _count, (_page - 1) * _count + _count) : [];
 };
 
 /** */

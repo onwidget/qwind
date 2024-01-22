@@ -1,39 +1,40 @@
 import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
 
-import IconStar from "~/components/icons/IconStar"
-const sideImg = "https://images.unsplash.com/photo-1583195648430-18b2681307e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80";
+import IconStar from "~/components/icons/IconStar";
+const sideImg =
+  "https://images.unsplash.com/photo-1583195648430-18b2681307e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80";
 
 export default component$(() => {
   const stepsData = {
-    title: 'Sed ac magna sit amet risus tristique interdum. hac.',
+    title: "Sed ac magna sit amet risus tristique interdum. hac.",
     items: [
       {
-        title: 'Step 1',
+        title: "Step 1",
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.",
         icon: IconStar,
       },
       {
-        title: 'Step 2',
+        title: "Step 2",
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.",
         icon: IconStar,
       },
       {
-        title: 'Step 3',
+        title: "Step 3",
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.",
         icon: IconStar,
       },
       {
-        title: 'Ready!',
+        title: "Ready!",
         icon: IconStar,
       },
     ],
     image: {
       src: sideImg,
-      alt: 'Steps image',
+      alt: "Steps image",
     },
   };
   const { title, items, image } = stepsData;
@@ -43,7 +44,7 @@ export default component$(() => {
       <div class="row-gap-10 grid gap-6 md:grid-cols-2">
         <div class="mb-4 md:mb-0 md:py-4 md:pr-16">
           {title && <h2 class="font-heading mb-8 text-3xl font-bold lg:text-4xl">{title}</h2>}
-          {items &&
+          {Array.isArray(items) &&
             items.length &&
             items.map(({ title, description, icon: Icon }, index) => (
               <div key={`item-steps-${index}`} class="flex">
@@ -51,7 +52,7 @@ export default component$(() => {
                   <div>
                     {index !== items.length - 1 ? (
                       <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-900">
-                        {Icon ? (
+                        {typeof Icon !== "undefined" ? (
                           <Icon class="h-6 w-6 text-primary-800 dark:text-slate-200" />
                         ) : (
                           <IconStar class="h-6 w-6 text-primary-800 dark:text-slate-200" />
@@ -59,7 +60,8 @@ export default component$(() => {
                       </div>
                     ) : (
                       <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-900 bg-primary-900">
-                        {Icon ? (
+                        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+                        {typeof Icon !== "undefined" ? (
                           <Icon class="h-6 w-6 text-white dark:text-slate-200" />
                         ) : (
                           <IconStar class="h-6 w-6 text-white dark:text-slate-200" />
@@ -69,7 +71,7 @@ export default component$(() => {
                   </div>
                   {index !== items.length - 1 && <div class="h-full w-px bg-gray-300 dark:bg-slate-500"></div>}
                 </div>
-                <div class={`pt-1 ${index !== items.length - 1 ? 'pb-8' : ''}`}>
+                <div class={`pt-1 ${index !== items.length - 1 ? "pb-8" : ""}`}>
                   {title && <p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">{title}</p>}
                   {description && <p class="text-gray-600 dark:text-slate-400">{description}</p>}
                 </div>
@@ -77,7 +79,7 @@ export default component$(() => {
             ))}
         </div>
         <div class="relative">
-          {image && (
+          {typeof image !== "undefined" && (
             <Image
               layout="constrained"
               src={image.src}

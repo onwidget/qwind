@@ -83,7 +83,7 @@ export default component$(() => {
           {links.map(({ title, items }, index) => (
             <div key={index} class="col-span-6 md:col-span-3 lg:col-span-2">
               <div class="text-gray-800 dark:text-gray-300 font-medium mb-2">{title}</div>
-              {items && Array.isArray(items) && items.length > 0 && (
+              {Array.isArray(items) && items.length > 0 && (
                 <ul class="text-sm">
                   {items.map(({ title, href }, index2) => (
                     <li key={index2} class="mb-2">
@@ -110,7 +110,7 @@ export default component$(() => {
                   title={label}
                   href={href}
                 >
-                  {Icon && <Icon />}
+                  {typeof Icon !== "undefined" && <Icon />}
                 </Link>
               </li>
             ))}
