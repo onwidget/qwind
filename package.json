@@ -1,7 +1,7 @@
 {
   "name": "qwind",
   "description": "A template to make your website using Qwik + Tailwind CSS.",
-  "version": "0.119.0",
+  "version": "0.120.0",
   "type": "module",
   "engines": {
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
