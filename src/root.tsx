@@ -1,15 +1,11 @@
-import { component$, useStyles$ } from "@builder.io/qwik";
-import {
-  QwikCityProvider,
-  RouterOutlet,
-  ServiceWorkerRegister,
-} from "@builder.io/qwik-city";
+import { component$ } from "@builder.io/qwik";
+import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from "@builder.io/qwik-city";
 
 import { RouterHead } from "~/components/common/RouterHead";
 import { DarkThemeLauncher } from "~/components/common/DarkThemeLauncher";
 
 // import "@fontsource-variable/inter";
-import globalStyles from "~/assets/styles/global.css?inline";
+import "~/assets/styles/global.css";
 
 export default component$(() => {
   /**
@@ -18,8 +14,6 @@ export default component$(() => {
    *
    * Dont remove the `<head>` and `<body>` elements.
    */
-
-  useStyles$(globalStyles);
 
   return (
     <QwikCityProvider>

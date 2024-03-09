@@ -5,12 +5,12 @@
 /server
 
 # Development
-node_modules/
+node_modules
+*.local
 
 # Cache
 .cache
 .mf
-.vscode
 .rollup.cache
 tsconfig.tsbuildinfo
 
@@ -24,7 +24,10 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Editor
-!.vscode/extensions.json
+.vscode/*
+!.vscode/launch.json
+!.vscode/*.code-snippets
+
 .idea
 .DS_Store
 *.suo
@@ -39,5 +42,4 @@ lerna-debug.log*
 
 package-lock.json
 .jampack
-
 tmp
