@@ -1,17 +1,17 @@
 import { component$, useStore } from "@builder.io/qwik";
-import { useContent } from "@builder.io/qwik-city";
+// import { useContent } from "@builder.io/qwik-city";
 
 import Logo from "~/components/common/Logo";
 import ToggleTheme from "~/components/common/ToggleTheme";
-import ToggleMenu from "~/components/common/ToggleMenu";
-import IconChevronDown from "../icons/IconChevronDown";
+// import ToggleMenu from "~/components/common/ToggleMenu";
+// import IconChevronDown from "../icons/IconChevronDown";
 
 export default component$(() => {
   const store = useStore({
     isScrolling: false,
   });
 
-  const { menu } = useContent();
+  // const { menu } = useContent();
 
   return (
     <header
@@ -37,14 +37,14 @@ export default component$(() => {
           </a>
           <div class="flex items-center md:hidden">
             <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
-            <ToggleMenu />
+            {/* <ToggleMenu /> */}
           </div>
         </div>
         <nav
           class="items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5"
           aria-label="Main navigation"
         >
-          {menu && menu.items ? (
+          {/* {menu && menu.items ? (
             <ul class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium">
               {menu.items.map(({ text, href, items }, key) => (
                 <li key={key} class={items?.length ? "dropdown" : ""}>
@@ -74,7 +74,7 @@ export default component$(() => {
                 </li>
               ))}
             </ul>
-          ) : null}
+          ) : null} */}
         </nav>
         <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
           <div class="items-center flex justify-between w-full md:w-auto">
@@ -83,10 +83,13 @@ export default component$(() => {
             </div>
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
               <a
-                href="https://github.com/onwidget/qwind"
-                class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
+                href="/blog/"
+                class="btn bg-[#e5d066] ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
-                Download
+                <p class="text-[#111827]">
+
+                Blog
+                </p>
               </a>
             </span>
           </div>

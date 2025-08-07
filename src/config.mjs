@@ -1,12 +1,12 @@
 export const SITE = {
-  name: "Qwind",
+  name: "DesiLifter",
 
   title:
-    "Qwind — Free template for Qwik + Tailwind CSS to build your new website.",
+    "Desilifter.pro",
   description:
-    "Qwind is a free and ready to start template to make your website using Qwik and Tailwind CSS.",
+    "Follow for easy daily tips and reminders on natural bodybuilding, made especially for Indians.",
 
-  origin: "https://qwind.pages.dev",
+  origin: "https://desilifter.pro/",
   basePathname: "/",
   trailingSlash: true,
 };

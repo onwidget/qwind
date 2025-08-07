@@ -1,27 +1,39 @@
 import { component$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
-
 import type { DocumentHead, StaticGenerateHandler } from "@builder.io/qwik-city";
 import type { Post } from "~/types";
-
 import md from "markdown-it";
-
 import { fetchPosts, findPostBySlug } from "~/utils/posts";
+import { Suggestions } from "~/components/widgets/Suggestions";
+import { getRelatedPosts } from "~/utils/suggestions";
 
-export const useGetPostBySlug = routeLoader$(async ({ params, status }) => {
+export const useGetPostBySlug = routeLoader$(async ({ params, status }): Promise<Post | number> => {
   const post = await findPostBySlug(params.slug);
+  if (!post) return status(404);
+  return post;
+});
 
-  if (!post) {
-    return status(404);
+export const useRelatedPosts = routeLoader$(async (requestEvent) => {
+  const currentPost = await requestEvent.resolveValue(useGetPostBySlug);
+  // Handle the case where currentPost is a status code
+  if (typeof currentPost === 'number') {
+    return [];
   }
-
-  return post as Post;
+  const allPosts = await fetchPosts();
+  return getRelatedPosts(allPosts, currentPost.slug);
 });
 
 export default component$(() => {
-  const signal = useGetPostBySlug();
+  const postSignal = useGetPostBySlug();
+  const relatedPosts = useRelatedPosts().value;
 
-  const post = signal.value as Post;
+  // Handle the case where post is a status code
+  if (typeof postSignal.value === 'number') {
+    return <div>Post not found</div>;
+  }
+
+  const post = postSignal.value;
+  
 
   return (
     <section class="mx-auto py-8 sm:py-16 lg:py-20">
@@ -36,7 +48,6 @@ export default component$(() => {
                 timeZone: "UTC",
               })}
             </time>
-            {/* ~{" "} {Math.ceil(post.readingTime)} min read */}
           </p>
           <h1 class="leading-tighter font-heading mx-auto mb-8 max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl">
             {post.title}
@@ -63,10 +74,13 @@ export default component$(() => {
             html: true,
           }).render(post.content)}
         />
+        <Suggestions links={relatedPosts} title="Also Read" />
       </article>
     </section>
   );
 });
+
+// ... rest of your code remains the same ...
 
 export const onStaticGenerate: StaticGenerateHandler = async () => {
   const posts = await fetchPosts();
@@ -80,7 +94,7 @@ export const head: DocumentHead = ({ resolveValue }) => {
   const post = resolveValue(useGetPostBySlug) as Post;
 
   return {
-    title: `${post.title} — Qwind`,
+    title: `${post.title} — Desilifter`,
     meta: [
       {
         name: "description",

@@ -1,6 +1,6 @@
 {
-  "name": "qwind",
-  "description": "A template to make your website using Qwik + Tailwind CSS.",
+  "name": "desilifter",
+  "description": "Follow for easy daily tips and reminders on natural bodybuilding, made especially for Indians.",
   "version": "0.122.0",
   "type": "module",
   "engines": {
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.0.20",
+    "@qwikest/icons": "^0.0.13",
     "@unpic/qwik": "^0.0.46",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0",

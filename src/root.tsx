@@ -1,11 +1,15 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
-import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from "@builder.io/qwik-city";
+import {
+  QwikCityProvider,
+  RouterOutlet,
+  ServiceWorkerRegister,
+} from "@builder.io/qwik-city";
 
 import { RouterHead } from "~/components/common/RouterHead";
 import { DarkThemeLauncher } from "~/components/common/DarkThemeLauncher";
 
 // import "@fontsource-variable/inter";
-import styles from  "~/assets/styles/global.css?inline";
+import styles from "~/assets/styles/global.css?inline";
 
 export default component$(() => {
   /**
@@ -30,8 +34,22 @@ export default component$(() => {
         <RouterHead />
         <DarkThemeLauncher />
         <ServiceWorkerRegister />
+
+        {/* <!-- Google tag (gtag.js) --> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-TZNW0GPRT3"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TZNW0GPRT3');
+  `}
+        />
       </head>
-      <body class="text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-gray-900 antialiased">
+      <body class="bg-white tracking-tight text-gray-900 antialiased dark:bg-gray-900 dark:text-slate-300">
         <RouterOutlet />
       </body>
     </QwikCityProvider>

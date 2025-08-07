@@ -21,28 +21,28 @@ export const ItemGrid = (props: Props) => {
     panel: panelClass = "",
     title: titleClass = "",
     description: descriptionClass = "",
-    icon: defaultIconClass = "text-secondary-500 dark:text-secondary-700",
+    icon: defaultIconClass = "text-[#e5d066] dark:text-[#e5d066]",
   } = classes as Record<string, string>;
 
   return (
     items.length && (
-      <div class={twMerge("grid mx-auto gap-8", containerClass)}>
+      <div class={twMerge("grid w-full gap-8 ", containerClass)}>
         {items.map(({ title, description, icon: Icon, classes: itemClasses = {} }, index) => (
           <div key={`${title}${index}`}>
-            <div class={twMerge("flex flex-row max-w-md", panelClass, itemClasses.panel)}>
+            <div class={twMerge("flex flex-row w-full", panelClass, itemClasses.panel)}>
               <div class="flex justify-center">
                 {(Icon || DefaultIcon) &&
                   (Icon ? (
-                    <Icon class={twMerge("w-7 h-7 mr-2", defaultIconClass, itemClasses.icon)} />
+                    <Icon class={twMerge("w-7 h-7 mr-2 ", defaultIconClass, itemClasses.icon)} />
                   ) : (
                     <DefaultIcon class={twMerge("w-7 h-7 mr-2", defaultIconClass, itemClasses.icon)} />
                   ))}
               </div>
-              <div>
+              <div class="w-full">
                 <h3 class={twMerge("text-xl font-bold", titleClass, itemClasses.title)}>{title}</h3>
                 {description && (
                   <p
-                    class={twMerge("text-gray-600 dark:text-slate-400 mt-3", descriptionClass, itemClasses.description)}
+                    class={twMerge("text-gray-600 dark:text-slate-400 mt-3 max-w-none", descriptionClass, itemClasses.description)}
                     dangerouslySetInnerHTML={description}
                   />
                 )}

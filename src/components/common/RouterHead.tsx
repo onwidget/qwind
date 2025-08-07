@@ -10,11 +10,11 @@ export const RouterHead = component$(() => {
 
   return (
     <>
-      <title>{head.title}</title>
+      <title>{"DesiLifter.pro | Natural Bodybuilding Tips for Indians"}</title>
 
       <link rel="canonical" href={String(loc.url)} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/svg+xml" href="./flexed-biceps.svg" />
 
       {head.meta.map((m, i) => (
         <meta key={i} {...m} />
